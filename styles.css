@@ -279,6 +279,8 @@ header nav a {
 /* Base Shape Styling */
 .abstract-shape {
     position: relative;
+    min-width: 200px;
+    min-height: 200px;
     width: 200px;
     height: 200px;
     /* background: linear-gradient(45deg, #2250E7, #1A3BB8); */
@@ -822,4 +824,41 @@ footer {
     color: #2250E7;
     font-weight: bold;
     font-family: 'DM Sans';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tablet Styles */
+@media (max-width: 1000px) {
+    .intro-container, .projects-container, .image-container, .skills-container, .profile-container, .kpi-container, .past-work-container{
+        width: 90%;
+    }
+
+    .project-grid, .projects-grid, .publications-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        width: 100%;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
 }
