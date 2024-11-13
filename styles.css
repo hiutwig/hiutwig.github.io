@@ -276,14 +276,18 @@ header nav a {
 } */
 
 
+
+
+
+
+
 /* Base Shape Styling */
-.abstract-shape {
+/* .abstract-shape {
     position: relative;
     min-width: 200px;
     min-height: 200px;
     width: 200px;
     height: 200px;
-    /* background: linear-gradient(45deg, #2250E7, #1A3BB8); */
     background-color: #2250E7;
     clip-path: polygon(60% 0%, 100% 50%, 50% 100%, 0% 50%);
     transform: rotate(25deg);
@@ -291,14 +295,14 @@ header nav a {
     overflow: visible;
 }
 
-/* Hover Effect */
+
 .abstract-shape:hover {
     transform: rotateX(360deg) rotateY(360deg) scale(1.2);
     background: linear-gradient(135deg, #F05454, #ff9f43, #1B9CFC);
     clip-path: polygon(50% 0%, 100% 40%, 80% 100%, 20% 100%, 0% 40%);
 }
 
-/* Particle Trail Effect */
+
 .abstract-shape::before,
 .abstract-shape::after {
     content: '';
@@ -314,7 +318,7 @@ header nav a {
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* Particle Movements */
+
 .abstract-shape:hover::before {
     transform: translate(-70%, -70%) rotate(45deg) scale(0.9);
     opacity: 0.5;
@@ -324,9 +328,74 @@ header nav a {
     transform: translate(70%, 70%) rotate(-45deg) scale(0.7);
     opacity: 0.3;
     filter: blur(4px);
+} */
+
+
+
+
+
+/* Container for positioning the SVG shapes */
+.svg-container {
+    position: relative;
+    width: 300px; /* Adjust based on your layout needs */
+    height: 300px; /* Adjust based on your layout needs */
+    margin: 20px 60px; /* Centers the SVGs horizontally */
+    overflow: visible;
+    min-width: 200px;
 }
 
+/* General styling for abstract shapes */
+.abstract-shape {
+    position: absolute;
+    width: 100%; /* Adjust based on your SVG size */
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for initial hover */
+}
 
+/* Styling for the first shape */
+.shape-1 {
+    top: 20px;
+    left: 20px;
+    transform: rotate(10deg) scale(1);
+    opacity: 1;
+}
+
+/* Styling for the second shape */
+.shape-2 {
+    top: 10px;
+    left: -50px;
+    transform: rotate(-15deg) scale(1.1);
+    opacity: 1;
+}
+
+/* Hover Effects */
+.svg-container:hover .shape-1 {
+    animation: spin-clockwise 3s linear infinite; /* Clockwise spinning effect */
+}
+
+.svg-container:hover .shape-2 {
+    animation: spin-counterclockwise 3s linear infinite; /* Counterclockwise spinning effect */
+}
+
+/* Clockwise Spin Animation */
+@keyframes spin-clockwise {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Counterclockwise Spin Animation */
+@keyframes spin-counterclockwise {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
 
 
 
