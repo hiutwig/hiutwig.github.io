@@ -920,8 +920,12 @@ footer {
         overflow-x: hidden;
     }
 
-    .intro-container, .projects-container, .image-container, .skills-container, .profile-container, .kpi-container, .past-work-container{
+    .intro-container, .projects-container, .image-container, .skills-container, .profile-container, .past-work-container{
         width: 90%;
+    }
+
+    .kpi-container{
+        width: 100%;
     }
 
     .projects-container{
