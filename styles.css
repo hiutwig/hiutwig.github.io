@@ -874,7 +874,7 @@ footer {
         flex-direction: column;
     }
 
-    .profile-image, .skills-image, .skills-text, .project-wide-image, .project-image-section, .image-container, .image-box{
+    .profile-image, .skills-image, .skills-text, .project-wide-image, .project-image-section, .image-container, .image-box, .project-challenge{
         width: 100%;
     }
 
