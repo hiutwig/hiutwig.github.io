@@ -974,6 +974,7 @@ footer {
 
     .buttons{
         flex-direction: column;
+        margin-top: 36px;
     }
 
     .svg-container{
@@ -982,5 +983,39 @@ footer {
 
     .offset{
         margin-top: 80px;
+    }
+
+    .shape-1{
+        top: -38px;
+        left: 78px;
+        width: 113%;
+    }
+
+    .shape-2{
+        top: 9px;
+        left: -39px;
+        width:86%;
+    }
+
+    .greeting{
+        font-size: 1rem;
+        margin-top: 36px;
+    }
+
+    .intro{
+        padding: 0;
+        padding-top: 20px;
+    }
+
+    .intro h2{
+        font-size: 1.6rem;
+    }
+
+    .btn-primary{
+        text-align: center;
+    }
+
+    .btn-secondary{
+        text-align: center;
     }
 }
