@@ -110,7 +110,7 @@ header nav a {
 
 
 .intro {
-    padding: 100px 0;
+    padding: 60px 0;
     background-color: #F7CBBF;
 }
 
@@ -339,7 +339,7 @@ header nav a {
     position: relative;
     width: 300px; /* Adjust based on your layout needs */
     height: 300px; /* Adjust based on your layout needs */
-    margin: 20px 60px; /* Centers the SVGs horizontally */
+    margin: 20px 120px; /* Centers the SVGs horizontally */
     overflow: visible;
     min-width: 200px;
 }
@@ -406,7 +406,7 @@ header nav a {
 .projects {
     background-color: #2250E7;
     color: #F7CBBF;
-    padding: 80px 0;
+    padding: 60px 0;
     text-align: center;
 }
 
@@ -945,6 +945,10 @@ footer {
 
     .profile-image, .skills-image, .skills-text, .project-wide-image, .project-image-section, .image-container, .image-box, .project-challenge{
         width: 100%;
+    }
+
+    .project-wide-image img, .project-image-section img{
+        border-radius: 0px;
     }
 
     .project-intro p{
