@@ -978,7 +978,7 @@ footer {
     }
 
     .svg-container{
-        margin-bottom: 60px;
+        margin-bottom: 0px;
     }
 
     .offset{
@@ -1004,7 +1004,6 @@ footer {
 
     .intro{
         padding: 0;
-        padding-top: 20px;
     }
 
     .intro h2{
