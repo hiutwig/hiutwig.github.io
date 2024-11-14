@@ -1021,4 +1021,13 @@ footer {
     .btn-secondary{
         text-align: center;
     }
+
+    .nav-links a{
+        margin-left: 0;
+        font-size: 0.8rem;
+    }
+
+    .logo{
+        font-size: 1rem;
+    }
 }
