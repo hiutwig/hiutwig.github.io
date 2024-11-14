@@ -1022,12 +1022,12 @@ footer {
         text-align: center;
     }
 
-    .nav-links a{
+    .nav-links a, .nav-links-secondary a{
         margin-left: 0;
         font-size: 0.8rem;
     }
 
-    .logo{
+    .logo, .logo-secondary{
         font-size: 1rem;
     }
 }
