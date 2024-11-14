@@ -576,9 +576,9 @@ footer {
 }
 
 .profile-image img {
-    width: 100%;
+    width: 50%;
     /* height: auto; */
-    height: 400px;
+    height: auto;
     border-radius: 8px;
 }
 
