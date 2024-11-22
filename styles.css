@@ -373,11 +373,11 @@ header nav a {
 
 /* Hover Effects */
 .svg-container:hover .shape-1 {
-    animation: spin-clockwise 3s linear infinite; /* Clockwise spinning effect */
+    animation: spin-clockwise 3s linear infinite, swing 3s linear infinite; /* Clockwise spinning effect */
 }
 
 .svg-container:hover .shape-2 {
-    animation: spin-counterclockwise 3s linear infinite; /* Counterclockwise spinning effect */
+    animation: spin-counterclockwise 3s linear infinite, swing 3s linear infinite; /* Counterclockwise spinning effect */
 }
 
 /* Clockwise Spin Animation */
@@ -397,6 +397,24 @@ header nav a {
     }
     to {
         transform: rotate(-360deg);
+    }
+}
+
+@keyframes swing {
+    20% {
+        transform: rotate(15deg);
+    }
+    40% {
+        transform: rotate(-10deg);
+    }
+    60% {
+        transform: rotate(5deg);
+    }
+    80% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }
 
@@ -554,6 +572,61 @@ footer {
 
 
 
+.avatar-container {
+    position: relative;
+    width: 300px;
+    height: auto;
+    width: 50%;
+    margin-top: 100px;
+    margin-left: 40px;
+}
+
+.avatar-image {
+    width: 75%;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.avatar-image img {
+    width: 95%;
+    /* height: auto; */
+    height: auto;
+    border-radius: 8px;
+}
+
+.shape-about-1 {
+    position: absolute;
+    top: -166px;
+    left: -80px;
+    width: 88%;
+    height: auto;
+    /* transform: rotate(25deg); */
+    z-index: 2;
+}
+
+.shape-about-2 {
+    position: absolute;
+    bottom: -120px;
+    right: 100px;
+    width: 94%;
+    height: auto;
+    /* transform: rotate(-20deg); */
+    z-index: 0;
+}
+
+.avatar-container:hover .shape-about-1 {
+    animation: swing 3s linear; /* Clockwise spinning effect */
+}
+
+.avatar-container:hover .shape-about-2 {
+    animation: swing 3s linear; /* Counterclockwise spinning effect */
+}
+
+
+
 
 /* Profile Section */
 .profile-section {
@@ -567,7 +640,7 @@ footer {
 .profile-container {
     display: flex;
     width: 100%;
-    gap: 80px;
+    gap: 0px;
 }
 
 /* Image Styling */
@@ -738,7 +811,7 @@ footer {
 
 .project-intro p {
     font-size: 3rem;
-    line-height: 0.5;
+    line-height: 1.2;
     margin-bottom: 20px;
     color: #2250E7;
 }
@@ -751,7 +824,7 @@ footer {
 
 .project-wide-image img {
     width: 100%;
-    height: 300px;
+    height: auto;
     border-radius: 8px;
 }
 
@@ -892,10 +965,11 @@ footer {
 }
 
 .kpi-item {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #2250E7;
     font-weight: bold;
     font-family: 'DM Sans';
+    margin: 0 auto;
 }
 
 
@@ -956,7 +1030,26 @@ footer {
     }
 
     .project-intro p{
-        line-height: 0.8;
+        line-height: 1.2;
+    }
+
+    .avatar-container{
+        margin: 40px auto;
+    }
+
+    .avatar-image{
+        margin: auto;
+        width: 100%;
+    }
+
+    .shape-about-1{
+        top: -90px;
+        left: -30px;
+    }
+
+    .shape-about-2{
+        bottom: -70px;
+        right: 20px;
     }
 
     .intro h2{
@@ -1030,5 +1123,15 @@ footer {
 
     .logo, .logo-secondary{
         font-size: 1rem;
+    }
+
+    .shape-about-1{
+        top: -50px;
+        left: -30px;
+    }
+
+    .shape-about-2{
+        bottom: -40px;
+        right: 20px;
     }
 }
