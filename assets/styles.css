@@ -819,6 +819,31 @@ footer {
     margin: 0 0 16px;
 }
 
+.project-figure-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 64px 32px;
+    align-items: start;
+}
+
+.project-figure {
+    margin: 0;
+}
+
+.case-study-cropped .project-figure img {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.project-figure figcaption {
+    max-width: 420px;
+    margin: 0 auto;
+    color: #2250E7;
+    font-size: 1rem;
+    line-height: 1.25;
+    text-align: center;
+}
+
 .project-image-pair {
     display: grid;
     grid-template-columns: minmax(0, 1.25fr) minmax(220px, 0.75fr);
@@ -1049,6 +1074,10 @@ video {
         grid-template-columns: 1fr;
     }
 
+    .project-figure-grid {
+        gap: 48px 24px;
+    }
+
     .project-layered-image {
         min-height: 420px;
     }
@@ -1130,6 +1159,15 @@ video {
 
     .project-portrait-grid {
         columns: 1;
+    }
+
+    .project-figure-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .project-figure figcaption {
+        max-width: 100%;
     }
 
     .project-layered-image {
