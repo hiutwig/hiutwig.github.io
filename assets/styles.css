@@ -738,7 +738,7 @@ footer {
 
 .project-intro p {
     font-size: 3rem;
-    line-height: 1rem;
+    line-height: 1.1;
     margin-bottom: 20px;
     color: #2250E7;
 }
@@ -789,6 +789,74 @@ footer {
     width: 100%;
     height: auto;
     border-radius: 8px;
+}
+
+.case-study-cropped .project-image-section {
+    width: min(80%, 1120px);
+}
+
+.case-study-cropped .project-image-section img {
+    display: block;
+    margin-bottom: 24px;
+}
+
+.case-study-cropped .project-image-section img:last-child {
+    margin-bottom: 0;
+}
+
+.project-portrait-grid {
+    columns: 3 240px;
+    column-gap: 24px;
+}
+
+.project-portrait-grid img,
+.project-portrait-grid .legend {
+    break-inside: avoid;
+}
+
+.project-portrait-grid .legend {
+    display: block;
+    margin: 0 0 16px;
+}
+
+.project-image-pair {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(220px, 0.75fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.project-image-pair img {
+    margin-bottom: 0;
+}
+
+.project-image-pair .legend {
+    grid-column: 1 / -1;
+}
+
+.project-layered-image {
+    position: relative;
+    min-height: 480px;
+}
+
+.project-layered-image img.project-underlay,
+.project-layered-image img.project-foreground {
+    margin-bottom: 0;
+}
+
+.project-layered-image .project-underlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-layered-image .project-foreground {
+    position: relative;
+    z-index: 1;
+    width: 82%;
+    margin: 0 auto;
 }
 
 
@@ -965,12 +1033,33 @@ video {
         border-radius: 0px;
     }
 
+    .case-study-cropped .project-image-section {
+        width: 90%;
+    }
+
+    .case-study-cropped .project-image-section img {
+        border-radius: 8px;
+    }
+
+    .project-portrait-grid {
+        columns: 2 220px;
+    }
+
+    .project-image-pair {
+        grid-template-columns: 1fr;
+    }
+
+    .project-layered-image {
+        min-height: 420px;
+    }
+
     .project-description p{
         margin-left: 0;
     }
 
     .project-intro p{
-        line-height: 0.8;
+        font-size: 2.4rem;
+        line-height: 1.12;
     }
 
     .intro h2{
@@ -1027,6 +1116,28 @@ video {
 
     .intro h2{
         font-size: 1.6rem;
+    }
+
+    .project-intro p{
+        font-size: 1.8rem;
+        line-height: 1.18;
+    }
+
+    .case-study-cropped .project-image-section {
+        width: calc(100% - 40px);
+        margin: 32px auto;
+    }
+
+    .project-portrait-grid {
+        columns: 1;
+    }
+
+    .project-layered-image {
+        min-height: 360px;
+    }
+
+    .project-layered-image .project-foreground {
+        width: 88%;
     }
 
     .btn-primary{

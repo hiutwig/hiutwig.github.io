@@ -32,6 +32,9 @@ def protect_project(project):
     if not os.path.exists(project_index_path):
         abort(404, description="Project not found")
 
+    if project not in PROJECT_PASSWORDS:
+        return send_from_directory(f'works/{project}', 'index.html')
+
     # Handle password submission
     if request.method == 'POST':
         entered_password = request.form['password']
@@ -48,7 +51,7 @@ def protect_project(project):
 @app.route('/works/<project>/<path:filename>')
 def serve_project_assets(project, filename):
     # Block access to index.html directly
-    if filename == "index.html":
+    if project in PROJECT_PASSWORDS and filename == "index.html":
         abort(403, description="Direct access to project files is not allowed.")
     return send_from_directory(f'works/{project}', filename)
 
