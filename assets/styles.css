@@ -1530,3 +1530,364 @@ video {
     color: #d9534f;
     margin-bottom: 1rem;
 }
+
+/* CyberLabs Figma rebuild */
+.case-study-cyberlabs {
+    background: #fff;
+    color: #000;
+    overflow-x: hidden;
+}
+
+.case-study-cyberlabs > header,
+.case-study-cyberlabs > footer {
+    display: none;
+}
+
+.case-study-cyberlabs .logo,
+.case-study-cyberlabs .nav-links a,
+.case-study-cyberlabs footer,
+.case-study-cyberlabs footer p {
+    color: #000;
+}
+
+.cyberlabs-page {
+    --cl-canvas: 1400px;
+    --cl-content: 1000px;
+    --cl-small: 482px;
+    --cl-gutter: 200px;
+    --cl-gap: 118px;
+    --cl-section: 32px;
+    --cl-section-tight: 32px;
+    --cl-copy-top: 48px;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    overflow: hidden;
+    background: #fff;
+    color: #000;
+    font-family: var(--font-sans);
+}
+
+.cyberlabs-page * {
+    font-family: var(--font-sans);
+}
+
+.cyberlabs-page img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+}
+
+.cyberlabs-intro,
+.cyberlabs-copy-row,
+.cyberlabs-title-block,
+.cyberlabs-statement,
+.cyberlabs-logo-stack {
+    width: min(calc(100% - calc(var(--cl-gutter) * 2)), var(--cl-content));
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.cyberlabs-intro {
+    padding: 64px 0 48px;
+}
+
+.cyberlabs-kicker {
+    margin: 0 0 18px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.cyberlabs-intro h1 {
+    max-width: 520px;
+    margin: 0;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 0.98;
+    letter-spacing: 0;
+}
+
+.cyberlabs-media {
+    margin: 0 auto;
+}
+
+.cyberlabs-media--bleed {
+    width: 100vw;
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+}
+
+.cyberlabs-media--content {
+    width: min(calc(100% - calc(var(--cl-gutter) * 2)), var(--cl-content));
+}
+
+.cyberlabs-copy-row {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    column-gap: 82px;
+    margin-top: var(--cl-copy-top);
+}
+
+.cyberlabs-copy-row h2 {
+    margin: 0;
+    padding-top: 4px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.05;
+}
+
+.cyberlabs-copy-row p,
+.cyberlabs-statement p {
+    margin: 0 0 16px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.55;
+}
+
+.cyberlabs-copy-row p:last-child,
+.cyberlabs-statement p:last-child {
+    margin-bottom: 0;
+}
+
+.cyberlabs-copy-row strong,
+.cyberlabs-statement strong,
+.cyberlabs-offset-grid strong {
+    font-weight: 800;
+}
+
+.cyberlabs-concept-art {
+    margin-top: var(--cl-section);
+}
+
+.cyberlabs-title-block {
+    margin-top: 64px;
+    margin-bottom: 48px;
+}
+
+.case-title-display {
+    margin: 0;
+    padding-top: 36px;
+    color: #000;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 0.98;
+    letter-spacing: 0;
+}
+
+.cyberlabs-title-block .case-title-display {
+    max-width: 610px;
+}
+
+.cyberlabs-rebrand-preview {
+    margin-bottom: var(--cl-section);
+}
+
+.cyberlabs-branding-copy {
+    margin-top: 0;
+}
+
+.cyberlabs-offset-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, var(--cl-small)));
+    justify-content: center;
+    column-gap: var(--cl-gap);
+    width: min(calc(100% - calc(var(--cl-gutter) * 2)), var(--cl-content));
+    margin: var(--cl-section) auto 0;
+}
+
+.cyberlabs-offset-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--cl-section);
+}
+
+.cyberlabs-offset-column--lower {
+    padding-top: var(--cl-section);
+}
+
+.cyberlabs-offset-grid figure {
+    margin: 0;
+}
+
+.cyberlabs-offset-grid figcaption {
+    max-width: 390px;
+    margin: 24px auto 0;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.12;
+    text-align: center;
+}
+
+.cyberlabs-brand-grid {
+    margin-bottom: var(--cl-section);
+}
+
+.cyberlabs-logo-copy {
+    margin-top: var(--cl-section);
+}
+
+.cyberlabs-logo-stack {
+    margin-top: var(--cl-section);
+    margin-bottom: var(--cl-section);
+}
+
+.cyberlabs-logo-stack img:first-child {
+    width: 100%;
+}
+
+.cyberlabs-logo-stack img + img {
+    width: 632px;
+    max-width: 100%;
+    margin: var(--cl-section) auto 0;
+}
+
+.cyberlabs-statement {
+    margin-top: 0;
+    margin-bottom: var(--cl-section);
+}
+
+.cyberlabs-statement .case-title-display {
+    max-width: 820px;
+}
+
+.cyberlabs-statement p {
+    max-width: 790px;
+    margin-top: 48px;
+}
+
+.cyberlabs-website-preview {
+    margin-bottom: var(--cl-section);
+}
+
+.cyberlabs-second-challenge {
+    margin-top: 0;
+}
+
+.cyberlabs-website-grid {
+    margin-top: var(--cl-section);
+    margin-bottom: var(--cl-section);
+}
+
+.cyberlabs-website-grid .cyberlabs-offset-column {
+    gap: var(--cl-section);
+}
+
+.cyberlabs-applied {
+    margin-bottom: var(--cl-section);
+}
+
+.cyberlabs-applied .case-title-display {
+    max-width: 620px;
+}
+
+.cyberlabs-applied p {
+    max-width: 720px;
+    margin-top: 48px;
+}
+
+.cyberlabs-applied p + p {
+    margin-top: 16px;
+}
+
+.cyberlabs-swag figcaption {
+    margin: 48px 0 96px;
+    color: #000;
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+@media (max-width: 1000px) {
+    .cyberlabs-page {
+        --cl-gutter: 56px;
+        --cl-gap: 44px;
+        --cl-section: 32px;
+        --cl-copy-top: 48px;
+    }
+
+    .cyberlabs-intro h1 {
+        font-size: 42px;
+    }
+
+    .cyberlabs-copy-row {
+        grid-template-columns: 1fr;
+        row-gap: 32px;
+    }
+
+    .cyberlabs-copy-row h2 {
+        font-size: 18px;
+    }
+
+    .cyberlabs-offset-grid {
+        width: calc(100% - calc(var(--cl-gutter) * 2));
+        column-gap: 40px;
+    }
+
+    .cyberlabs-offset-grid figcaption {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 680px) {
+    .cyberlabs-page {
+        --cl-gutter: 20px;
+        --cl-section: 32px;
+        --cl-copy-top: 32px;
+    }
+
+    .cyberlabs-intro {
+        padding: 64px 0 48px;
+    }
+
+    .cyberlabs-intro h1 {
+        font-size: 34px;
+    }
+
+    .cyberlabs-copy-row p,
+    .cyberlabs-statement p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .cyberlabs-title-block {
+        margin-top: 64px;
+        margin-bottom: 48px;
+    }
+
+    .cyberlabs-offset-grid {
+        grid-template-columns: 1fr;
+        row-gap: 32px;
+    }
+
+    .cyberlabs-offset-column,
+    .cyberlabs-website-grid .cyberlabs-offset-column {
+        gap: 32px;
+    }
+
+    .cyberlabs-offset-column--lower {
+        padding-top: 0;
+    }
+
+    .cyberlabs-offset-grid figcaption {
+        max-width: 100%;
+        margin-top: 24px;
+        font-size: 14px;
+    }
+
+    .cyberlabs-logo-stack img + img {
+        margin-top: 32px;
+    }
+
+    .cyberlabs-statement {
+        margin-bottom: 32px;
+    }
+
+    .cyberlabs-statement p {
+        margin-top: 48px;
+    }
+}
