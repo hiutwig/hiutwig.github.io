@@ -5,14 +5,44 @@
     font-family: Arial, sans-serif;
 }
 
+:root {
+    --font-sans: 'DM Sans', sans-serif;
+    --portfolio-blue: #2250E7;
+    --portfolio-peach: #F7CBBF;
+    --portfolio-peach-dark: #ECC5C1;
+    --portfolio-lime: #E7FC53;
+    --case-bg: #FFFFFF;
+    --case-ink: #000000;
+    --case-muted: #F4F4F4;
+    --case-wide: 1400px;
+    --case-content: 1000px;
+    --case-copy: 640px;
+    --case-small-media: 900px;
+    --case-side-padding: 200px;
+    --case-space-xs: 24px;
+    --case-space-s: 40px;
+    --case-space-m: 72px;
+    --case-space-l: 96px;
+    --case-space-xl: 136px;
+    --case-space-2xl: 160px;
+    --case-title-large: clamp(3.75rem, 7vw, 6.25rem);
+    --case-title-small: 1.2rem;
+    --case-body-large: 1.5rem;
+    --case-body: 1rem;
+    --case-caption: 1rem;
+    --case-title-leading: 0.98;
+    --case-body-leading: 1.55;
+    --case-caption-leading: 1.25;
+}
+
 body {
-    background-color: #F7CBBF;
-    color: #2250E7;
+    background-color: var(--portfolio-peach);
+    color: var(--portfolio-blue);
 }
 
 .body-secondary {
-    background-color: #2250E7;
-    color: #F7CBBF;
+    background-color: var(--portfolio-blue);
+    color: var(--portfolio-peach);
 }
 
 .logo, .logo-secondary {
@@ -804,6 +834,129 @@ footer {
     margin-bottom: 0;
 }
 
+.case-study-figma {
+    background: var(--case-bg);
+    color: var(--case-ink);
+}
+
+.case-study-figma .logo,
+.case-study-figma .nav-links a,
+.case-study-figma .project-intro h2,
+.case-study-figma .project-intro p,
+.case-study-figma .project-challenge h2,
+.case-study-figma .project-description p,
+.case-study-figma .project-figure figcaption,
+.case-study-figma .legend {
+    color: var(--case-ink);
+}
+
+.case-study-figma .project-image-section {
+    width: min(calc(100% - calc(var(--case-side-padding) * 2)), var(--case-content));
+}
+
+.case-study-figma .project-image-section img {
+    border-radius: 0;
+}
+
+.case-study-figma .project-full-bleed {
+    width: min(calc(100% - var(--case-space-m)), var(--case-wide));
+}
+
+.case-study-figma .project-section {
+    width: min(calc(100% - calc(var(--case-side-padding) * 2)), var(--case-content));
+    max-width: none;
+    margin: var(--case-space-s) auto;
+    gap: var(--case-space-m);
+}
+
+.case-study-figma .project-description p {
+    line-height: var(--case-body-leading);
+}
+
+.project-feature-title {
+    width: min(64%, 800px);
+    margin: var(--case-space-l) auto var(--case-space-2xl);
+}
+
+.project-feature-title h2 {
+    margin: 0;
+    color: var(--case-ink);
+    font-size: var(--case-title-large);
+    font-weight: 500;
+    line-height: var(--case-title-leading);
+}
+
+.project-wide-figure {
+    margin-bottom: var(--case-space-xl);
+}
+
+.project-branding-copy {
+    margin-bottom: var(--case-space-2xl);
+}
+
+.project-branding-copy .project-challenge h2 {
+    padding-top: 0.3em;
+}
+
+.project-branding-copy .project-description p {
+    max-width: var(--case-copy);
+    font-size: var(--case-body-large);
+    line-height: var(--case-body-leading);
+}
+
+.case-study-cropped .project-branding-grid {
+    width: min(calc(100% - calc(var(--case-side-padding) * 2)), var(--case-small-media));
+    gap: var(--case-space-m) var(--case-space-s);
+}
+
+.project-logo-subsection {
+    margin-top: var(--case-space-2xl);
+}
+
+.project-logo-stack {
+    margin-top: var(--case-space-l);
+    margin-bottom: var(--case-space-2xl);
+}
+
+.case-study-cropped .project-logo-stack img {
+    margin-bottom: var(--case-space-l);
+}
+
+.case-study-cropped .project-logo-stack .project-logo-stack-small {
+    width: min(100%, 632px);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.case-study-figma .project-section-heading {
+    display: block;
+    width: min(calc(100% - calc(var(--case-side-padding) * 2)), var(--case-content));
+    margin-top: var(--case-space-2xl);
+    margin-bottom: var(--case-space-xl);
+}
+
+.case-study-figma .project-section-heading .project-challenge,
+.case-study-figma .project-section-heading .project-description {
+    width: 100%;
+}
+
+.case-study-figma .project-section-heading .project-challenge h2 {
+    padding-top: 0;
+    max-width: 760px;
+    font-size: clamp(2.75rem, 5vw, 4.75rem);
+    font-weight: 500;
+    line-height: 1;
+}
+
+.case-study-figma .project-section-heading .project-description p {
+    max-width: 760px;
+    margin-top: var(--case-space-m);
+    margin-left: 0;
+    padding-top: 0;
+    font-size: var(--case-body-large);
+    line-height: var(--case-body-leading);
+}
+
 .project-portrait-grid {
     columns: 3 240px;
     column-gap: 24px;
@@ -822,7 +975,7 @@ footer {
 .project-figure-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 64px 32px;
+    gap: 48px 40px;
     align-items: start;
 }
 
@@ -832,15 +985,15 @@ footer {
 
 .case-study-cropped .project-figure img {
     width: 100%;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
 }
 
 .project-figure figcaption {
     max-width: 420px;
     margin: 0 auto;
-    color: #2250E7;
-    font-size: 1rem;
-    line-height: 1.25;
+    color: var(--portfolio-blue);
+    font-size: var(--case-caption);
+    line-height: var(--case-caption-leading);
     text-align: center;
 }
 
@@ -1066,6 +1219,57 @@ video {
         border-radius: 8px;
     }
 
+    .project-feature-title {
+        width: 90%;
+        margin: 72px auto 96px;
+    }
+
+    .project-feature-title h2 {
+        font-size: 3.25rem;
+    }
+
+    .project-wide-figure {
+        margin-bottom: 88px;
+    }
+
+    .project-branding-copy {
+        margin-bottom: 96px;
+    }
+
+    .project-branding-copy .project-description p {
+        max-width: none;
+        font-size: 1.35rem;
+    }
+
+    .case-study-cropped .project-branding-grid {
+        width: 90%;
+        gap: 56px 24px;
+    }
+
+    .project-logo-subsection,
+    .project-section-heading {
+        margin-top: 120px;
+    }
+
+    .project-section-heading {
+        width: 90%;
+        margin-bottom: 88px;
+    }
+
+    .project-logo-stack {
+        margin-bottom: 120px;
+    }
+
+    .project-section-heading .project-challenge h2 {
+        font-size: 3.25rem;
+    }
+
+    .project-section-heading .project-description p {
+        max-width: none;
+        margin-top: 48px;
+        font-size: 1.35rem;
+    }
+
     .project-portrait-grid {
         columns: 2 220px;
     }
@@ -1155,6 +1359,56 @@ video {
     .case-study-cropped .project-image-section {
         width: calc(100% - 40px);
         margin: 32px auto;
+    }
+
+    .project-feature-title {
+        width: calc(100% - 40px);
+        margin: 64px auto 80px;
+    }
+
+    .project-feature-title h2 {
+        font-size: 2.8rem;
+    }
+
+    .project-wide-figure {
+        margin-bottom: 72px;
+    }
+
+    .project-branding-copy {
+        margin-bottom: 80px;
+    }
+
+    .project-branding-copy .project-description p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+
+    .case-study-cropped .project-branding-grid {
+        width: calc(100% - 40px);
+        gap: 48px;
+    }
+
+    .project-logo-subsection,
+    .project-section-heading {
+        margin-top: 88px;
+    }
+
+    .project-section-heading {
+        width: calc(100% - 40px);
+        margin-bottom: 72px;
+    }
+
+    .project-logo-stack {
+        margin-bottom: 88px;
+    }
+
+    .project-section-heading .project-challenge h2 {
+        font-size: 2.8rem;
+    }
+
+    .project-section-heading .project-description p {
+        margin-top: 40px;
+        font-size: 1.2rem;
     }
 
     .project-portrait-grid {
