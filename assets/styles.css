@@ -1533,12 +1533,11 @@ video {
 
 /* CyberLabs Figma rebuild */
 .case-study-cyberlabs {
-    background: #fff;
-    color: #000;
+    background: var(--portfolio-peach);
+    color: var(--portfolio-blue);
     overflow-x: hidden;
 }
 
-.case-study-cyberlabs > header,
 .case-study-cyberlabs > footer {
     display: none;
 }
@@ -1547,7 +1546,7 @@ video {
 .case-study-cyberlabs .nav-links a,
 .case-study-cyberlabs footer,
 .case-study-cyberlabs footer p {
-    color: #000;
+    color: var(--portfolio-blue);
 }
 
 .cyberlabs-page {
@@ -1563,8 +1562,8 @@ video {
     max-width: none;
     margin: 0;
     overflow: hidden;
-    background: #fff;
-    color: #000;
+    background: var(--portfolio-peach);
+    color: var(--portfolio-blue);
     font-family: var(--font-sans);
 }
 
@@ -1633,7 +1632,7 @@ video {
 .cyberlabs-copy-row h2 {
     margin: 0;
     padding-top: 4px;
-    color: #000;
+    color: var(--portfolio-blue);
     font-size: 16px;
     font-weight: 800;
     line-height: 1.05;
@@ -1642,7 +1641,7 @@ video {
 .cyberlabs-copy-row p,
 .cyberlabs-statement p {
     margin: 0 0 16px;
-    color: #000;
+    color: var(--portfolio-blue);
     font-size: 16px;
     font-weight: 400;
     line-height: 1.55;
@@ -1671,7 +1670,7 @@ video {
 .case-title-display {
     margin: 0;
     padding-top: 36px;
-    color: #000;
+    color: var(--portfolio-blue);
     font-size: 36px;
     font-weight: 500;
     line-height: 0.98;
@@ -1716,7 +1715,7 @@ video {
 .cyberlabs-offset-grid figcaption {
     max-width: 390px;
     margin: 24px auto 0;
-    color: #000;
+    color: var(--portfolio-blue);
     font-size: 16px;
     font-weight: 400;
     line-height: 1.12;
@@ -1796,7 +1795,7 @@ video {
 
 .cyberlabs-swag figcaption {
     margin: 48px 0 96px;
-    color: #000;
+    color: var(--portfolio-blue);
     font-size: 14px;
     line-height: 1.2;
     text-align: center;
