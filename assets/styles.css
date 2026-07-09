@@ -1890,3 +1890,420 @@ video {
         margin-top: 48px;
     }
 }
+
+/* PERSE Figma rebuild */
+.case-study-perse {
+    background: var(--portfolio-peach);
+    color: var(--portfolio-blue);
+    overflow-x: hidden;
+}
+
+.case-study-perse > footer {
+    display: block;
+}
+
+.case-study-perse .logo,
+.case-study-perse .nav-links a,
+.case-study-perse footer,
+.case-study-perse footer p {
+    color: var(--portfolio-blue);
+}
+
+.perse-page {
+    --perse-content: 1000px;
+    --perse-small: 482px;
+    --perse-gutter: 200px;
+    --perse-gap: 118px;
+    --perse-section: 48px;
+    --perse-copy-top: 56px;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    overflow: hidden;
+    background: var(--portfolio-peach);
+    color: var(--portfolio-blue);
+    font-family: var(--font-sans);
+}
+
+.perse-page * {
+    font-family: var(--font-sans);
+}
+
+.perse-page img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+}
+
+.perse-intro,
+.perse-copy-row,
+.perse-statement,
+.perse-dark-copy {
+    width: min(calc(100% - calc(var(--perse-gutter) * 2)), var(--perse-content));
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.perse-intro {
+    padding: 84px 0 56px;
+}
+
+.perse-kicker {
+    margin: 0 0 18px;
+    color: var(--portfolio-blue);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.perse-intro h1 {
+    max-width: 520px;
+    margin: 0;
+    color: var(--portfolio-blue);
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 0.98;
+    letter-spacing: 0;
+}
+
+.perse-media {
+    margin: 0 auto;
+}
+
+.perse-media--bleed {
+    width: 100vw;
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+}
+
+.perse-media--content {
+    width: min(calc(100% - calc(var(--perse-gutter) * 2)), var(--perse-content));
+    margin-top: var(--perse-section);
+}
+
+.perse-copy-row {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    column-gap: 82px;
+    margin-top: var(--perse-copy-top);
+}
+
+.perse-copy-row h2 {
+    margin: 0;
+    padding-top: 4px;
+    color: var(--portfolio-blue);
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.05;
+}
+
+.perse-copy-row p,
+.perse-statement p,
+.perse-dark-copy p {
+    margin: 0 0 16px;
+    color: var(--portfolio-blue);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.55;
+}
+
+.perse-copy-row p:last-child,
+.perse-statement p:last-child,
+.perse-dark-copy p:last-child {
+    margin-bottom: 0;
+}
+
+.perse-copy-row strong,
+.perse-statement strong,
+.perse-dark-copy strong,
+.perse-offset-grid strong {
+    font-weight: 800;
+}
+
+.perse-quote {
+    margin-top: var(--perse-section);
+}
+
+.perse-logo-elements {
+    margin-top: var(--perse-section);
+}
+
+.perse-statement {
+    margin-top: var(--perse-section);
+    margin-bottom: var(--perse-section);
+}
+
+.case-study-perse .case-title-display {
+    max-width: 700px;
+    color: var(--portfolio-blue);
+}
+
+.perse-statement p {
+    max-width: 760px;
+    margin-top: 32px;
+}
+
+.perse-definition {
+    margin-top: 0;
+}
+
+.perse-dark-copy {
+    position: relative;
+    margin-top: var(--perse-section);
+    padding: 64px 0;
+    background: #1b1d22;
+    box-shadow: 0 0 0 100vmax #1b1d22;
+    color: #f4f1eb;
+    clip-path: inset(0 -100vmax);
+}
+
+.perse-dark-copy p {
+    max-width: 640px;
+    color: #f4f1eb;
+}
+
+.perse-offset-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, var(--perse-small)));
+    justify-content: center;
+    column-gap: var(--perse-gap);
+    width: min(calc(100% - calc(var(--perse-gutter) * 2)), var(--perse-content));
+    margin: var(--perse-section) auto 0;
+}
+
+.perse-offset-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--perse-section);
+}
+
+.perse-offset-column--lower {
+    padding-top: var(--perse-section);
+}
+
+.perse-offset-grid figure {
+    margin: 0;
+}
+
+.perse-offset-grid figcaption {
+    max-width: 390px;
+    margin: 24px auto 0;
+    color: var(--portfolio-blue);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.12;
+    text-align: center;
+}
+
+.perse-name-grid {
+    margin-top: var(--perse-section);
+}
+
+.perse-brand-grid,
+.perse-ui-grid {
+    margin-bottom: var(--perse-section);
+}
+
+.perse-brand-system {
+    position: relative;
+    margin-top: var(--perse-section);
+    padding: 72px 0 84px;
+    background: #1b1d22;
+    box-shadow: 0 0 0 100vmax #1b1d22;
+    clip-path: inset(0 -100vmax);
+}
+
+.perse-brand-system .perse-brand-grid {
+    margin-top: 0;
+}
+
+.perse-brand-system .perse-offset-grid figcaption,
+.perse-brand-system .perse-type-system,
+.perse-brand-system .perse-type-label {
+    color: #f4f1eb;
+}
+
+.perse-type-system {
+    width: min(calc(100% - calc(var(--perse-gutter) * 2)), var(--perse-content));
+    margin: 72px auto 0;
+}
+
+.perse-type-label {
+    margin: 0 0 26px;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.perse-type-family + .perse-type-family {
+    margin-top: 42px;
+}
+
+.perse-type-family h3 {
+    margin: 0 0 24px;
+    color: #f4f1eb;
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 0.95;
+}
+
+.perse-type-family p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin: 0;
+    color: #f4f1eb;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.perse-type-family--sora,
+.perse-type-family--sora * {
+    font-family: "Sora", var(--font-sans);
+}
+
+.perse-type-family--work,
+.perse-type-family--work * {
+    font-family: "Work Sans", var(--font-sans);
+}
+
+.perse-ui-grid {
+    position: relative;
+    width: min(100%, 1400px);
+    padding: 72px max(20px, calc((100vw - var(--perse-content)) / 2)) 84px;
+    background: #ecc5c1;
+    grid-template-columns: repeat(2, minmax(0, var(--perse-small)));
+}
+
+.perse-final {
+    margin-top: var(--perse-section);
+}
+
+.perse-ui-example figcaption,
+.perse-final figcaption {
+    margin: 48px 0 96px;
+    color: var(--portfolio-blue);
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+@media (max-width: 1000px) {
+    .perse-page {
+        --perse-gutter: 56px;
+        --perse-gap: 44px;
+        --perse-section: 40px;
+        --perse-copy-top: 48px;
+    }
+
+    .perse-intro h1 {
+        font-size: 42px;
+    }
+
+    .perse-copy-row {
+        grid-template-columns: 1fr;
+        row-gap: 32px;
+    }
+
+    .perse-copy-row h2 {
+        font-size: 18px;
+    }
+
+    .perse-offset-grid {
+        width: calc(100% - calc(var(--perse-gutter) * 2));
+        column-gap: 40px;
+    }
+
+    .perse-offset-grid figcaption {
+        font-size: 16px;
+    }
+
+    .perse-type-system {
+        width: calc(100% - calc(var(--perse-gutter) * 2));
+    }
+
+    .perse-ui-grid {
+        width: 100%;
+        padding-right: var(--perse-gutter);
+        padding-left: var(--perse-gutter);
+    }
+}
+
+@media (max-width: 680px) {
+    .perse-page {
+        --perse-gutter: 20px;
+        --perse-section: 32px;
+        --perse-copy-top: 32px;
+    }
+
+    .perse-intro {
+        padding: 64px 0 48px;
+    }
+
+    .perse-intro h1 {
+        font-size: 34px;
+    }
+
+    .perse-copy-row p,
+    .perse-statement p,
+    .perse-dark-copy p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .perse-offset-grid {
+        grid-template-columns: 1fr;
+        row-gap: 32px;
+    }
+
+    .perse-offset-column,
+    .perse-ui-grid .perse-offset-column {
+        gap: 32px;
+    }
+
+    .perse-offset-column--lower {
+        padding-top: 0;
+    }
+
+    .perse-offset-grid figcaption {
+        max-width: 100%;
+        margin-top: 24px;
+        font-size: 14px;
+    }
+
+    .perse-brand-system {
+        padding: 48px 0;
+    }
+
+    .perse-type-system {
+        width: calc(100% - calc(var(--perse-gutter) * 2));
+        margin-top: 48px;
+    }
+
+    .perse-type-family h3 {
+        font-size: 40px;
+    }
+
+    .perse-type-family p {
+        gap: 14px 22px;
+        font-size: 15px;
+    }
+
+    .perse-ui-grid {
+        padding: 48px var(--perse-gutter);
+    }
+
+    .perse-statement {
+        margin-bottom: 32px;
+    }
+
+    .perse-statement p {
+        margin-top: 32px;
+    }
+
+    .perse-dark-copy {
+        padding: 48px 0;
+    }
+}
