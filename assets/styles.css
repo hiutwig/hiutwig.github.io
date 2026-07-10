@@ -471,6 +471,8 @@ header nav a {
 .project-image {
     width: 100%;
     height: auto;
+    aspect-ratio: 1616 / 1344;
+    object-fit: cover;
     margin-bottom: 15px;
 }
 
