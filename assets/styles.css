@@ -1971,6 +1971,28 @@ video {
     background: linear-gradient(135deg, #f0f0f0 0%, #d6d6d6 55%, #eeeeee 100%);
 }
 
+.mundi-pdf-visual--asset {
+    height: auto;
+    min-height: 0;
+    background: transparent;
+}
+
+.mundi-pdf-visual--asset img,
+.mundi-pdf-asset,
+.mundi-pdf-screen-img,
+.mundi-reference-board img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+}
+
+.mundi-pdf-asset--centered {
+    width: min(100%, 1000px);
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .mundi-ui-card {
     position: absolute;
     width: 430px;
@@ -2063,6 +2085,11 @@ video {
         linear-gradient(90deg, rgba(255,255,255,0.06) 0 150px, transparent 150px),
         repeating-linear-gradient(0deg, transparent 0 58px, rgba(255,255,255,0.05) 58px 60px),
         #202124;
+}
+
+.mundi-pdf-screen-img {
+    width: min(100%, 1000px);
+    margin: 0 auto 112px;
 }
 
 .mundi-pdf-screen.is-after {
@@ -2321,23 +2348,13 @@ video {
 .mundi-depth-study span:nth-child(5) { background: #14b8b1; }
 
 .mundi-reference-board {
-    display: grid;
-    grid-template-columns: 1.05fr 1fr 1fr;
-    gap: 18px;
+    display: block;
     padding-bottom: 120px;
 }
 
-.mundi-reference-board div {
-    min-height: 300px;
-    background: #d8d8d8;
-}
-
-.mundi-reference-board div:first-child {
-    grid-row: span 2;
-}
-
-.mundi-reference-board div:last-child {
-    grid-column: span 2;
+.mundi-reference-board img {
+    width: min(100%, 1004px);
+    margin: 0 auto;
 }
 
 .mundi-takeaways article {
@@ -2447,6 +2464,10 @@ video {
     background: #c4ccd3;
 }
 
+.mundi-tinted-band .mundi-pdf-asset {
+    background: #c4ccd3;
+}
+
 .mundi-placeholder--phone {
     aspect-ratio: 0.68;
 }
@@ -2466,6 +2487,10 @@ video {
     font-size: 20px;
 }
 
+.mundi-neutral-showcase .mundi-pdf-asset {
+    margin-bottom: 72px;
+}
+
 .mundi-neutral-showcase .large {
     margin: 0 0 80px;
 }
@@ -2481,11 +2506,13 @@ video {
 }
 
 .mundi-semantic-comparison {
-    display: grid;
-    grid-template-columns: repeat(2, 250px);
-    justify-content: center;
-    gap: 180px;
+    display: block;
     padding: 80px 0 120px;
+}
+
+.mundi-semantic-comparison .mundi-pdf-asset {
+    width: min(100%, 935px);
+    margin: 0 auto;
 }
 
 .mundi-semantic-dots {
