@@ -14,9 +14,9 @@ PROJECT_PASSWORDS = {
 def home():
     return send_from_directory('.', 'index.html')
 
-@app.route('/<path:filename>')
-def serve_static_files(filename):
-    return send_from_directory('.', filename)
+@app.route('/experiments/<experiment>/')
+def serve_experiment(experiment):
+    return send_from_directory(f'experiments/{experiment}', 'index.html')
 
 # Works index page
 @app.route('/works/')
@@ -54,6 +54,14 @@ def serve_project_assets(project, filename):
     if project in PROJECT_PASSWORDS and filename == "index.html":
         abort(403, description="Direct access to project files is not allowed.")
     return send_from_directory(f'works/{project}', filename)
+
+@app.route('/<path:filename>')
+def serve_static_files(filename):
+    if os.path.isdir(filename):
+        index_path = os.path.join(filename, 'index.html')
+        if os.path.exists(index_path):
+            return send_from_directory(filename, 'index.html')
+    return send_from_directory('.', filename)
 
 if __name__ == '__main__':
     app.run(debug=True)
