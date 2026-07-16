@@ -1993,6 +1993,46 @@ video {
     margin-left: auto;
 }
 
+.mundi-hex-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    width: min(100%, 1000px);
+    margin: 32px auto 0;
+}
+
+.mundi-hex-grid span {
+    display: grid;
+    min-height: 124px;
+    align-content: end;
+    gap: 6px;
+    padding: 18px;
+    background: var(--swatch);
+}
+
+.mundi-hex-grid b,
+.mundi-hex-grid small {
+    color: #ffffff;
+    line-height: 1;
+}
+
+.mundi-hex-grid span:nth-child(1) b,
+.mundi-hex-grid span:nth-child(1) small,
+.mundi-hex-grid span:nth-child(4) b,
+.mundi-hex-grid span:nth-child(4) small {
+    color: #061217;
+}
+
+.mundi-hex-grid b {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.mundi-hex-grid small {
+    font-size: 12px;
+    font-weight: 700;
+}
+
 .mundi-ui-card {
     position: absolute;
     width: 430px;
@@ -2142,14 +2182,30 @@ video {
 }
 
 .mundi-brand-strip span {
+    position: relative;
     display: block;
-    height: 430px;
+    min-height: 220px;
+    aspect-ratio: 0.78;
+}
+
+.mundi-brand-strip b {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1;
 }
 
 .mundi-brand-strip span:nth-child(1) { background: #14b8b1; }
 .mundi-brand-strip span:nth-child(2) { background: #1e8a7d; }
 .mundi-brand-strip span:nth-child(3) { background: #112e63; }
 .mundi-brand-strip span:nth-child(4) { background: #3289ad; }
+.mundi-brand-strip span:nth-child(1) b,
+.mundi-brand-strip span:nth-child(4) b {
+    color: #061217;
+}
 
 .mundi-pdf-section {
     padding: 120px 0;
@@ -2358,8 +2414,8 @@ video {
 }
 
 .mundi-takeaways article {
-    max-width: 850px;
-    padding: 72px 80px;
+    max-width: 760px;
+    padding: 48px 58px;
     background: #0d2533;
 }
 
@@ -2369,21 +2425,21 @@ video {
 }
 
 .mundi-takeaways h2 {
-    margin-bottom: 70px;
+    margin-bottom: 48px;
 }
 
 .mundi-takeaways h3 {
-    max-width: 660px;
-    margin-bottom: 50px;
+    max-width: 600px;
+    margin-bottom: 30px;
     color: #cfcfd1;
-    font-size: 50px;
+    font-size: 38px;
     font-weight: 700;
     line-height: 1.08;
 }
 
 .mundi-takeaways p {
-    max-width: 620px;
-    font-size: 27px;
+    max-width: 600px;
+    font-size: 22px;
 }
 
 .mundi-before-after-demo {
@@ -2588,12 +2644,17 @@ video {
 
     .mundi-brand-strip {
         grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        padding-bottom: 72px;
     }
 
-    .mundi-reference-board,
-    .mundi-semantic-comparison {
-        grid-template-columns: 1fr;
-        gap: 40px;
+    .mundi-brand-strip span {
+        min-height: 0;
+        aspect-ratio: 1.55;
+    }
+
+    .mundi-hex-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -2638,6 +2699,31 @@ video {
         grid-template-columns: 1fr;
     }
 
+    .mundi-brand-strip {
+        gap: 12px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .mundi-brand-strip span {
+        aspect-ratio: 3.8;
+    }
+
+    .mundi-brand-strip b {
+        right: 16px;
+        bottom: 16px;
+        font-size: 16px;
+    }
+
+    .mundi-hex-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .mundi-hex-grid span {
+        min-height: 82px;
+    }
+
     .mundi-button-stack {
         grid-template-columns: 1fr;
     }
@@ -2647,11 +2733,16 @@ video {
     }
 
     .mundi-takeaways article {
-        padding: 44px 28px;
+        padding: 32px 24px;
     }
 
     .mundi-takeaways h3 {
-        font-size: 30px;
+        margin-bottom: 18px;
+        font-size: 24px;
+    }
+
+    .mundi-takeaways p {
+        font-size: 17px;
     }
 }
 
