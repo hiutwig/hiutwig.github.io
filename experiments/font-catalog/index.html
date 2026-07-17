@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Font Post — a tiny type-finding ritual</title>
+  <meta name="theme-color" content="#ececea">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">FONT POST <i>♡</i></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <button class="nav-button active" data-screen="play">Postcard</button>
+      <button class="nav-button" data-screen="picks">Best so far <b id="favoriteCount">0</b></button>
+      <button class="nav-button" data-screen="library">Library</button>
+    </nav>
+    <button class="text-button" id="infoButton">How it works</button>
+  </header>
+
+  <main>
+    <section class="quiet-intro">
+      <div><p class="eyebrow">A tiny type-finding ritual</p><h1>Send yourself<br>a nice thought.</h1></div>
+      <p id="stats">Opening the font folder…</p>
+    </section>
+
+    <section class="controls" aria-label="Choose message and vibe">
+      <label class="message-field">
+        <span>Postcard message</span>
+        <div class="input-pair">
+          <input id="sample" value="Make it strange, then make it yours." maxlength="110" autocomplete="off">
+          <button id="messageButton" title="Try another message">Another note ↻</button>
+        </div>
+      </label>
+      <div class="vibe-field">
+        <span>Font mood</span>
+        <div class="vibes" id="vibes">
+          <button class="vibe active" data-vibe="any">Anything</button>
+          <button class="vibe" data-vibe="clean">Clean</button>
+          <button class="vibe" data-vibe="loud">Loud</button>
+          <button class="vibe" data-vibe="fancy">Fancy</button>
+          <button class="vibe" data-vibe="weird">Weird</button>
+          <button class="vibe" data-vibe="retro">Retro</button>
+          <button class="vibe" data-vibe="techy">Techy</button>
+          <button class="vibe" data-vibe="handwritten">Handmade</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen active" id="playScreen" data-screen-panel="play">
+      <div class="play-meta"><span id="vibeLabel">Anything goes</span><span id="playCount">Finding a font…</span></div>
+      <nav class="specimen-tabs" aria-label="Font specimen">
+        <button class="active" data-preview-mode="message">Postcard</button>
+        <button data-preview-mode="accents">Accents</button>
+        <button data-preview-mode="characters">Characters</button>
+        <button data-preview-mode="stress">Stress test</button>
+      </nav>
+
+      <div class="postcard-stage">
+        <article class="postcard" id="spotlight" aria-live="polite">
+          <div class="airmail-edge" aria-hidden="true"></div>
+          <div class="postmark" aria-hidden="true"><b>FONT POST</b><span>LOCAL MAIL</span><i></i><i></i><i></i></div>
+          <div class="stamp" aria-hidden="true"><span>✿</span><small>ONE NICE<br>THOUGHT</small></div>
+          <div class="postcard-copy">
+            <div class="hero-preview" id="heroPreview">Make it strange, then make it yours.</div>
+            <p class="message-credit" id="messageCredit">A note to self</p>
+          </div>
+          <div class="postcard-address">
+            <span>TO</span><b>MY FUTURE SELF</b>
+            <span>FROM</span><b>SOMEWHERE CREATIVE</b>
+          </div>
+          <div class="doodle-star" aria-hidden="true">✦</div>
+        </article>
+      </div>
+
+      <div class="font-caption">
+        <div><span>Now trying</span><h2 id="currentName">Opening the wardrobe…</h2><p id="currentStyle">TrueType font</p><p class="recommendation-reason" id="recommendationReason">A broad wildcard while I learn your taste.</p></div>
+        <a id="currentDownload" href="#">Download font ↓</a>
+      </div>
+      <div class="coverage-row" id="coverageBadges"><span>Checking accents…</span></div>
+      <section class="family-shelf" id="familyShelf">
+        <div><span class="eyebrow">Family test</span><p id="familySummary">Finding related styles…</p></div>
+        <div class="family-variants" id="familyVariants"></div>
+      </section>
+
+      <section class="tag-editor" aria-label="Tags for current font">
+        <div><span class="eyebrow">Your subsets</span><p>Add this font to any list you invent.</p></div>
+        <div class="current-tags" id="currentTags"><span class="muted">No tags yet</span></div>
+        <form id="inlineTagForm">
+          <input id="inlineTagInput" placeholder="e.g. logo ideas" maxlength="24" list="knownTags">
+          <button>Add tag +</button>
+        </form>
+      </section>
+
+      <section class="taste-trainer" aria-label="Rate this font">
+        <div class="learning-head">
+          <div><span class="eyebrow">Teach the sorter</span><p id="learningStatus">Exploring broadly · 0 taste signals</p></div>
+          <div class="learning-meter" aria-hidden="true"><i id="learningMeter"></i></div>
+        </div>
+        <div class="rating-scale">
+          <button data-rating="0"><b>×</b><span>Pass</span><small>not me</small></button>
+          <button data-rating="1"><b>·</b><span>Maybe</span><small>unsure</small></button>
+          <button data-rating="2"><b>+</b><span>Nice</span><small>promising</small></button>
+          <button data-rating="3"><b>♥</b><span>Love</span><small>very me</small></button>
+          <button data-rating="4"><b>★</b><span>Top tier</span><small>prioritize</small></button>
+        </div>
+        <div class="trainer-foot"><span>Keys 1–5 work too</span><button id="undoRating" disabled>Undo last rating</button></div>
+      </section>
+      <div class="decision-bar"><button class="decision quiet" id="skipButton">Skip without rating</button><button class="decision quiet" id="explainButton">Why this font?</button></div>
+      <button class="surprise" id="surpriseButton">Give me a true wildcard ↝</button>
+    </section>
+
+    <section class="screen" id="picksScreen" data-screen-panel="picks">
+      <div class="section-heading"><div><p class="eyebrow">Ranked by your taste</p><h2>Best so far</h2></div><p>Your Nice, Love, and Top tier fonts—strongest signals first.</p></div>
+      <div class="font-grid" id="picksGrid"></div>
+      <div class="empty" id="picksEmpty"><div>♡</div><h3>Nothing here yet</h3><p>Rate a few postcards and your strongest candidates will collect here.</p><button class="outline-button" data-go-play>Start training</button></div>
+    </section>
+
+    <section class="screen" id="libraryScreen" data-screen-panel="library">
+      <div class="section-heading library-heading">
+        <div><p class="eyebrow">All 10,599</p><h2>The library</h2></div>
+        <label class="search-box"><span>Search names</span><input id="search" type="search" placeholder="Cooper, Gothic, Script…" autocomplete="off"></label>
+      </div>
+      <div class="library-tools">
+        <div class="tag-filters" id="tagFilters"><button class="tag-filter active" data-tag="">All fonts</button></div>
+        <div class="library-options">
+          <label class="sort-control">Show <select id="qualityFilter"><option value="">Every font</option><option value="accents">Portuguese accents</option><option value="boldItalic">Bold + italic family</option><option value="complete">Complete family</option></select></label>
+          <label class="sort-control">Order <select id="sortMode"><option value="smart">Smart priority</option><option value="rating">My rating</option><option value="name">Name A–Z</option></select></label>
+          <div class="view-toggle" aria-label="Library layout"><button class="active" data-layout="grid">▦ Cards</button><button data-layout="list">☷ Long list</button></div>
+        </div>
+      </div>
+      <div class="library-count"><span id="resultCount">0 fonts</span><button class="text-button" id="clearSearch" hidden>Clear search</button></div>
+      <div class="font-grid" id="libraryGrid"></div>
+      <div class="empty" id="libraryEmpty" hidden><div>?</div><h3>Nothing in this corner</h3><p>Try another name or subset.</p></div>
+      <div class="pagination" id="pagination"></div>
+    </section>
+  </main>
+
+  <datalist id="knownTags"></datalist>
+
+  <dialog id="infoDialog" class="info-dialog">
+    <button class="dialog-close" aria-label="Close">×</button>
+    <p class="eyebrow">A little ritual</p><h2>Read it. Feel it. File it.</h2>
+    <ol>
+      <li><b>Choose a message</b><span>Use an affirmation, a writer’s line, or your own words.</span></li>
+      <li><b>Try a mood</b><span>Font moods are playful guesses based on filenames and styles.</span></li>
+      <li><b>Rate, don’t swipe</b><span>Five levels teach the smart sorter what deserves priority.</span></li>
+      <li><b>Stress-test it</b><span>Check accents, character sets, punctuation, and related family styles.</span></li>
+      <li><b>Make subsets</b><span>Create tags like “editorial,” “client A,” or “soft and strange.”</span></li>
+    </ol>
+    <p class="fine-print">Fonts load directly from your expanded local folder. Nothing is installed. Verify licensing before commercial use.</p>
+  </dialog>
+
+  <dialog id="tagDialog" class="tag-dialog">
+    <button class="dialog-close tag-dialog-close" aria-label="Close">×</button>
+    <p class="eyebrow">File this font</p><h2 id="tagDialogTitle">Add to a subset</h2>
+    <div id="dialogTags" class="current-tags"></div>
+    <form id="dialogTagForm"><input id="dialogTagInput" placeholder="Type a new or existing tag" maxlength="24" list="knownTags"><button>Add tag +</button></form>
+    <div class="known-tag-buttons" id="knownTagButtons"></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Saved to Picks ♥</div>
+  <script src="/app.js" defer></script>
+</body>
+</html>

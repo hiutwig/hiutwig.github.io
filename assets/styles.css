@@ -2697,8 +2697,8 @@ video {
     width: min(100%, var(--mundi-page));
     margin: 0 auto;
     padding: 0 max(24px, calc((100vw - var(--mundi-content)) / 2));
-    background: #ffffff;
-    color: #0d0f12;
+    background: var(--portfolio-peach);
+    color: var(--portfolio-blue);
     font-family: var(--font-sans);
 }
 
@@ -2744,7 +2744,7 @@ video {
 .mundi-pdf-hero h1 {
     max-width: 850px;
     margin: 0;
-    color: #000000;
+    color: var(--portfolio-blue);
     font-size: 74px;
     font-weight: 700;
     line-height: 1.08;
@@ -3295,7 +3295,7 @@ video {
     margin-right: calc(50% - 50vw);
     margin-left: calc(50% - 50vw);
     padding: 120px max(24px, calc((100vw - var(--mundi-content)) / 2));
-    background: #dfe6ec;
+    background: var(--portfolio-peach-dark);
 }
 
 .mundi-before-after {
@@ -4929,4 +4929,684 @@ video {
     .mundipagg-page--wireframe .mundi-button-demo {
         grid-template-columns: 1fr;
     }
+}
+
+/* Mundipagg faithful Figma/PDF structure override */
+.mundipagg-page.mundipagg-page--pdf-structure {
+    width: min(100%, var(--mundi-page));
+    max-width: var(--mundi-page);
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: max(24px, calc((100vw - var(--mundi-content)) / 2));
+    padding-left: max(24px, calc((100vw - var(--mundi-content)) / 2));
+    background: var(--portfolio-peach);
+    color: var(--portfolio-blue);
+}
+
+.mundipagg-page--pdf-structure .mundi-pdf-hero h1,
+.mundipagg-page--pdf-structure .mundi-pdf-copy-row h2,
+.mundipagg-page--pdf-structure .mundi-pdf-heading h2,
+.mundipagg-page--pdf-structure .mundi-pdf-thanks p {
+    color: var(--portfolio-blue);
+}
+
+.mundipagg-page--pdf-structure .mundi-tinted-band {
+    background: var(--portfolio-peach-dark);
+}
+
+.mundipagg-page--pdf-structure .mundi-pdf-dark,
+.mundipagg-page--pdf-structure .mundi-pdf-dark h2,
+.mundipagg-page--pdf-structure .mundi-pdf-dark h3,
+.mundipagg-page--pdf-structure .mundi-pdf-dark p,
+.mundipagg-page--pdf-structure .mundi-pdf-dark li,
+.mundipagg-page--pdf-structure .mundi-pdf-dark .mundi-eyebrow {
+    color: #cfcfd1;
+}
+
+.mundipagg-page--pdf-structure .mundi-palette-study {
+    width: min(100%, 1000px);
+    margin-right: auto;
+    margin-left: auto;
+    gap: 0;
+}
+
+.mundipagg-page--pdf-structure .mundi-state-demo {
+    background: #cbbcc8;
+}
+
+.mundipagg-page--pdf-structure .mundi-state-demo.is-dark {
+    background: #082233;
+}
+
+.mundipagg-page--pdf-structure .mundi-hex-grid + .mundi-wide-copy {
+    margin-top: 48px;
+}
+
+.mundipagg-page--pdf-structure .mundi-wide-copy + .mundi-neutral-pair,
+.mundipagg-page--pdf-structure .mundi-wide-copy + .mundi-semantic-demo {
+    margin-top: 56px;
+}
+
+.mundipagg-page--pdf-structure .mundi-neutral-pair--study {
+    width: min(100%, 1000px);
+    margin-right: auto;
+    margin-left: auto;
+    gap: 0;
+}
+
+.mundipagg-page--pdf-structure .mundi-neutral-pair--study > div {
+    min-height: 260px;
+    padding: 42px 32px;
+    background: #dfe6ec;
+}
+
+.mundipagg-page--pdf-structure .mundi-neutral-pair--study .is-dark-panel {
+    background: #050b10;
+    color: #ffffff;
+}
+
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-before span {
+    width: clamp(46px, 7vw, 88px);
+    margin-left: -8px;
+}
+
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-before span:nth-child(1) { background: #ffffff; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-before span:nth-child(2) { background: #f7f9fb; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-before span:nth-child(3) { background: #e8f0f5; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-before span:nth-child(4) { background: #dce8ef; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-before span:nth-child(5) { background: #b7cad5; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-before span:nth-child(6) { background: #91a7b2; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-before span:nth-child(1) { background: #071017; border: 1px solid #24465a; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-before span:nth-child(2) { background: #092330; border: 1px solid #24465a; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-before span:nth-child(3) { background: #193a4a; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-before span:nth-child(4) { background: #365a70; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-before span:nth-child(5) { background: #526f81; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-before span:nth-child(6) { background: #7894a4; }
+
+.mundipagg-page--pdf-structure .mundi-semantic-demo--tokens {
+    width: min(100%, 1000px);
+    margin-right: auto;
+    margin-left: auto;
+    background: transparent;
+}
+
+.mundipagg-page--pdf-structure .mundi-token-grid--semantic {
+    grid-template-columns: repeat(4, minmax(34px, 54px));
+    gap: 14px;
+}
+
+.mundipagg-page--pdf-structure .mundi-token-grid--semantic span {
+    border-radius: 50%;
+}
+
+.mundipagg-page--pdf-structure .mundi-neutral-system {
+    display: grid;
+    gap: 72px;
+    margin-bottom: 72px;
+}
+
+.mundipagg-page--pdf-structure .mundi-neutral-system p {
+    margin-bottom: 28px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.mundipagg-page--pdf-structure .mundi-neutral-system .mundi-neutral-scale span {
+    width: clamp(58px, 8vw, 122px);
+    margin-left: -14px;
+}
+
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:nth-child(1) { background: #000000; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:nth-child(2) { background: #121416; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:nth-child(3) { background: #1e2225; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:nth-child(4) { background: #2a3035; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:nth-child(5) { background: #363d44; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:nth-child(6) { background: #5f6873; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:nth-child(7) { background: #7c858f; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:nth-child(8) { background: #ffffff; border: 1px solid #dfe5ea; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-after span:nth-child(1) { background: #ffffff; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-after span:nth-child(2) { background: #f1f3f4; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-after span:nth-child(3) { background: #d8dadd; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-after span:nth-child(4) { background: #bfc2c6; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-after span:nth-child(5) { background: #a7aaad; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-after span:nth-child(6) { background: #8e9295; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-after span:nth-child(7) { background: #6f7272; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-after span:nth-child(8) { background: #000000; border: 1px solid #242424; }
+
+.mundipagg-page--pdf-structure .mundi-wcag-compare {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 88px;
+    width: min(100%, 1000px);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.mundipagg-page--pdf-structure .mundi-wcag-row {
+    display: grid;
+    grid-template-columns: 160px minmax(150px, max-content);
+    gap: 28px;
+    align-items: center;
+    margin-bottom: 34px;
+}
+
+.mundipagg-page--pdf-structure .mundi-wcag-row button {
+    height: 44px;
+    border: 0;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 800;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
+}
+
+.mundipagg-page--pdf-structure .mundi-wcag-row span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 32px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    background: #3e3e3e;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.mundipagg-page--pdf-structure .mundi-wcag-row span::before {
+    content: "✓";
+    display: inline-grid;
+    width: 16px;
+    height: 16px;
+    place-items: center;
+    border-radius: 3px;
+    background: #1fc33a;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.mundipagg-page--pdf-structure .mundi-wcag-row span.is-fail::before {
+    content: "×";
+    background: transparent;
+    color: #ff1d25;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.mundipagg-page--pdf-structure .mundi-wcag-row .is-success-before { background: #2ecc71; }
+.mundipagg-page--pdf-structure .mundi-wcag-row .is-warning-before { background: #ffca2f; color: #18232b; }
+.mundipagg-page--pdf-structure .mundi-wcag-row .is-error-before { background: #d93535; }
+.mundipagg-page--pdf-structure .mundi-wcag-row .is-info-before { background: #7b6ef6; }
+.mundipagg-page--pdf-structure .mundi-wcag-row .is-success-after { background: #008f3f; }
+.mundipagg-page--pdf-structure .mundi-wcag-row .is-warning-after { background: #ffc21d; color: #18232b; }
+.mundipagg-page--pdf-structure .mundi-wcag-row .is-error-after { background: #d40053; }
+.mundipagg-page--pdf-structure .mundi-wcag-row .is-info-after { background: #6358f2; }
+
+@media (max-width: 760px) {
+    .mundipagg-page--pdf-structure .mundi-state-demo,
+    .mundipagg-page--pdf-structure .mundi-neutral-pair--study,
+    .mundipagg-page--pdf-structure .mundi-semantic-demo--tokens,
+    .mundipagg-page--pdf-structure .mundi-wcag-compare {
+        grid-template-columns: 1fr;
+    }
+
+    .mundipagg-page--pdf-structure .mundi-state-demo {
+        gap: 36px;
+        padding: 32px 24px;
+    }
+
+    .mundipagg-page--pdf-structure .mundi-swatch-row {
+        grid-template-columns: 58px repeat(4, 44px);
+        gap: 10px;
+        justify-content: start;
+    }
+
+    .mundipagg-page--pdf-structure .mundi-button-stack {
+        grid-template-columns: repeat(2, minmax(118px, 150px));
+    }
+
+    .mundipagg-page--pdf-structure .mundi-button-stack button {
+        width: 100%;
+    }
+
+    .mundipagg-page--pdf-structure .mundi-neutral-pair--study > div {
+        min-height: 0;
+        padding: 32px 24px;
+    }
+
+    .mundipagg-page--pdf-structure .mundi-wcag-compare {
+        gap: 52px;
+    }
+
+    .mundipagg-page--pdf-structure .mundi-wcag-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 26px;
+    }
+
+    .mundipagg-page--pdf-structure .mundi-wcag-row button {
+        width: min(180px, 100%);
+    }
+}
+
+@media (max-width: 430px) {
+    .mundipagg-page--pdf-structure .mundi-button-stack,
+    .mundipagg-page--pdf-structure .mundi-swatch-row {
+        grid-template-columns: 1fr;
+    }
+
+    .mundipagg-page--pdf-structure .mundi-swatch-row span {
+        width: 44px;
+    }
+}
+
+/* Mundipagg portfolio rhythm: align the exception page with CyberLabs type/spacing. */
+.mundipagg-page--pdf-structure {
+    --mundi-section: 64px;
+    --mundi-copy-top: 48px;
+    --mundi-copy-gap: 82px;
+    --mundi-specimen-indent: clamp(32px, 7vw, 96px);
+    --mundi-left: 250px;
+    --mundi-gap: var(--mundi-copy-gap);
+}
+
+.mundipagg-page--pdf-structure p,
+.mundipagg-page--pdf-structure li,
+.mundipagg-page--pdf-structure .mundi-pdf-heading p,
+.mundipagg-page--pdf-structure .mundi-wide-copy,
+.mundipagg-page--pdf-structure .mundi-pdf-text p,
+.mundipagg-page--pdf-structure .mundi-takeaways p,
+.mundipagg-page--pdf-structure .mundi-neutral-showcase p,
+.mundipagg-page--pdf-structure .mundi-pdf-thanks p {
+    font-size: 16px;
+    line-height: 1.55;
+}
+
+.mundipagg-page--pdf-structure .mundi-eyebrow,
+.mundipagg-page--pdf-structure .mundi-pdf-copy-row h2,
+.mundipagg-page--pdf-structure .mundi-pdf-meta h3 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.05;
+}
+
+.mundipagg-page--pdf-structure .mundi-pdf-hero {
+    padding-top: 64px;
+    padding-bottom: 48px;
+}
+
+.mundipagg-page--pdf-structure .mundi-pdf-hero .mundi-eyebrow {
+    margin-bottom: 24px;
+}
+
+.mundipagg-page--pdf-structure .mundi-pdf-hero h1 {
+    max-width: 680px;
+    font-size: 38px;
+    line-height: 0.98;
+}
+
+.mundipagg-page--pdf-structure .mundi-pdf-copy-row,
+.mundipagg-page--pdf-structure .mundi-pdf-copy-row.is-inverted {
+    gap: var(--mundi-copy-gap);
+    padding-top: var(--mundi-copy-top);
+    padding-bottom: var(--mundi-copy-top);
+}
+
+.mundipagg-page--pdf-structure .mundi-pdf-copy-row h2 {
+    padding-top: 4px;
+}
+
+.mundipagg-page--pdf-structure .mundi-pdf-copy-row p {
+    max-width: 710px;
+    margin-bottom: 16px;
+}
+
+.mundipagg-page--pdf-structure .mundi-pdf-copy-row ul {
+    gap: 10px;
+    max-width: 710px;
+    padding-left: 18px;
+}
+
+.mundipagg-page--pdf-structure .mundi-pdf-section,
+.mundipagg-page--pdf-structure .mundi-pdf-dark,
+.mundipagg-page--pdf-structure .mundi-tinted-band,
+.mundipagg-page--pdf-structure .mundi-semantic-comparison,
+.mundipagg-page--pdf-structure .mundi-pdf-thanks {
+    padding-top: var(--mundi-section);
+    padding-bottom: var(--mundi-section);
+}
+
+.mundipagg-page--pdf-structure .mundi-pdf-heading {
+    max-width: 720px;
+    margin-bottom: 48px;
+}
+
+.mundipagg-page--pdf-structure .mundi-pdf-heading h2,
+.mundipagg-page--pdf-structure .mundi-pdf-problem h2,
+.mundipagg-page--pdf-structure .mundi-takeaways > h2 {
+    margin-bottom: 32px;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 0.98;
+}
+
+.mundipagg-page--pdf-structure .mundi-brand-strip {
+    gap: 18px;
+    padding-bottom: var(--mundi-section);
+}
+
+.mundipagg-page--pdf-structure .mundi-brand-strip span {
+    min-height: 0;
+    aspect-ratio: 1.7;
+}
+
+.mundipagg-page--pdf-structure .mundi-brand-strip b {
+    font-size: 16px;
+}
+
+.mundipagg-page--pdf-structure .mundi-pdf-text p {
+    margin-bottom: 16px;
+}
+
+.mundipagg-page--pdf-structure .mundi-pdf-meta {
+    gap: 48px;
+}
+
+.mundipagg-page--pdf-structure .mundi-pdf-meta h3 {
+    margin-bottom: 16px;
+}
+
+.mundipagg-page--pdf-structure .mundi-pdf-problem {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.mundipagg-page--pdf-structure .mundi-pdf-problem .mundi-eyebrow {
+    margin-bottom: 24px;
+}
+
+.mundipagg-page--pdf-structure .mundi-depth-study {
+    margin-top: 48px;
+}
+
+.mundipagg-page--pdf-structure .mundi-reference-board {
+    padding-bottom: var(--mundi-section);
+}
+
+.mundipagg-page--pdf-structure .mundi-takeaways h2 {
+    margin-bottom: 48px;
+}
+
+.mundipagg-page--pdf-structure .mundi-takeaways article {
+    padding: 32px;
+}
+
+.mundipagg-page--pdf-structure .mundi-takeaways h3 {
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+.mundipagg-page--pdf-structure .mundi-before-after-demo {
+    padding-bottom: var(--mundi-section);
+}
+
+.mundipagg-page--pdf-structure .mundi-mode-pair {
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+.mundipagg-page--pdf-structure .mundi-mode-pair > div {
+    min-height: 180px;
+    padding: 32px;
+}
+
+.mundipagg-page--pdf-structure .mundi-wide-copy {
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.mundipagg-page--pdf-structure .mundi-hex-grid + .mundi-wide-copy {
+    margin-top: 32px;
+}
+
+.mundipagg-page--pdf-structure .mundi-wide-copy + .mundi-neutral-pair,
+.mundipagg-page--pdf-structure .mundi-wide-copy + .mundi-semantic-demo {
+    margin-top: 32px;
+}
+
+.mundipagg-page--pdf-structure .mundi-neutral-pair,
+.mundipagg-page--pdf-structure .mundi-neutral-pair--study {
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.mundipagg-page--pdf-structure .mundi-neutral-pair--study,
+.mundipagg-page--pdf-structure .mundi-semantic-demo--tokens {
+    display: grid;
+    justify-content: start;
+    max-width: min(560px, calc(100% - var(--mundi-specimen-indent)));
+    margin-left: var(--mundi-specimen-indent);
+    margin-right: 0;
+}
+
+.mundipagg-page--pdf-structure .mundi-neutral-pair--study {
+    gap: 24px;
+}
+
+.mundipagg-page--pdf-structure .mundi-semantic-demo--tokens {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 0;
+}
+
+.mundipagg-page--pdf-structure .mundi-neutral-pair--study > div,
+.mundipagg-page--pdf-structure .mundi-semantic-set {
+    width: 100%;
+}
+
+.mundipagg-page--pdf-structure .mundi-neutral-pair--study .mundi-neutral-scale span {
+    width: 56px;
+    margin-left: -8px;
+}
+
+.mundipagg-page--pdf-structure .mundi-neutral-pair--study .mundi-neutral-scale span:first-child {
+    margin-left: 0;
+}
+
+.mundipagg-page--pdf-structure .mundi-token-grid--semantic {
+    grid-template-columns: repeat(4, 56px);
+    gap: 12px;
+    justify-content: start;
+}
+
+.mundipagg-page--pdf-structure .mundi-neutral-pair h3,
+.mundipagg-page--pdf-structure .mundi-before-after-demo h3,
+.mundipagg-page--pdf-structure .mundi-tinted-band h3,
+.mundipagg-page--pdf-structure .mundi-semantic-comparison h3,
+.mundipagg-page--pdf-structure .mundi-neutral-showcase h3 {
+    margin-bottom: 32px;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 0.98;
+}
+
+.mundipagg-page--pdf-structure .mundi-tinted-band .mundi-pdf-asset + h3 {
+    margin-top: 48px;
+}
+
+.mundipagg-page--pdf-structure .mundi-neutral-system {
+    gap: 48px;
+    margin-bottom: 48px;
+}
+
+.mundipagg-page--pdf-structure .mundi-neutral-showcase .mundi-pdf-asset,
+.mundipagg-page--pdf-structure .mundi-neutral-showcase .large {
+    margin-bottom: 48px;
+}
+
+.mundipagg-page--pdf-structure .mundi-neutral-showcase p {
+    padding-top: 32px;
+}
+
+.mundipagg-page--pdf-structure .mundi-semantic-comparison {
+    padding-top: 48px;
+}
+
+.mundipagg-page--pdf-structure .mundi-brand-strip b,
+.mundipagg-page--pdf-structure .mundi-hex-grid b,
+.mundipagg-page--pdf-structure .mundi-hex-grid small,
+.mundipagg-page--pdf-structure .mundi-button-stack p,
+.mundipagg-page--pdf-structure .mundi-swatch-table p,
+.mundipagg-page--pdf-structure .mundi-neutral-system p,
+.mundipagg-page--pdf-structure .mundi-mode-pair p,
+.mundipagg-page--pdf-structure .mundi-semantic-set p {
+    font-weight: 600;
+}
+
+.mundipagg-page--pdf-structure .mundi-swatch-row b {
+    font-weight: 400;
+}
+
+.mundipagg-page--pdf-structure .mundi-button-stack button,
+.mundipagg-page--pdf-structure .mundi-mode-pair button,
+.mundipagg-page--pdf-structure .mundi-wcag-row button {
+    font-weight: 700;
+}
+
+.mundipagg-page--pdf-structure .mundi-wcag-row span,
+.mundipagg-page--pdf-structure .mundi-mode-pair small {
+    font-weight: 500;
+}
+
+.mundipagg-page--pdf-structure .mundi-takeaways h3 {
+    font-weight: 500;
+}
+
+.mundipagg-page--pdf-structure .mundi-pdf-meta h3 {
+    text-transform: none;
+}
+
+.mundipagg-page--pdf-structure .mundi-neutral-pair--study > div,
+.mundipagg-page--pdf-structure .mundi-neutral-pair--study .is-dark-panel,
+.mundipagg-page--pdf-structure .mundi-semantic-set,
+.mundipagg-page--pdf-structure .mundi-semantic-set--dark,
+.mundipagg-page--pdf-structure .mundi-mode-pair > div,
+.mundipagg-page--pdf-structure .mundi-mode-pair > div.is-dark {
+    background: transparent;
+    color: var(--portfolio-blue);
+}
+
+.mundipagg-page--pdf-structure .mundi-neutral-pair--study > div,
+.mundipagg-page--pdf-structure .mundi-semantic-set {
+    padding: 0;
+}
+
+.mundipagg-page--pdf-structure .mundi-neutral-pair--study h3 {
+    margin-bottom: 18px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.05;
+}
+
+.mundipagg-page--pdf-structure .mundi-semantic-set p {
+    margin-bottom: 18px;
+    font-size: 16px;
+    line-height: 1.05;
+}
+
+.mundipagg-page--pdf-structure .mundi-mode-pair > div {
+    min-height: 0;
+    padding: 24px;
+}
+
+.mundipagg-page--pdf-structure .mundi-mode-pair p {
+    margin-bottom: 18px;
+}
+
+.mundipagg-page--pdf-structure .mundi-mode-pair small {
+    width: fit-content;
+}
+
+.mundipagg-page--pdf-structure .mundi-takeaways article,
+.mundipagg-page--pdf-structure .mundi-takeaways article + article {
+    max-width: 760px;
+    padding: 28px 0;
+    border-top: 1px solid rgba(207, 207, 209, 0.26);
+    background: transparent;
+}
+
+.mundipagg-page--pdf-structure .mundi-takeaways article:last-child {
+    border-bottom: 1px solid rgba(207, 207, 209, 0.26);
+}
+
+@media (max-width: 1000px) {
+    .mundipagg-page--pdf-structure {
+        --mundi-section: 32px;
+        --mundi-copy-top: 48px;
+        --mundi-copy-gap: 32px;
+        --mundi-left: 1fr;
+    }
+
+    .mundipagg-page--pdf-structure .mundi-pdf-copy-row,
+    .mundipagg-page--pdf-structure .mundi-pdf-copy-row.is-inverted {
+        grid-template-columns: 1fr;
+        row-gap: 32px;
+    }
+
+    .mundipagg-page--pdf-structure .mundi-pdf-copy-row h2 {
+        font-size: 18px;
+    }
+
+    .mundipagg-page--pdf-structure .mundi-mode-pair {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+}
+
+@media (max-width: 680px) {
+    .mundipagg-page--pdf-structure {
+        --mundi-section: 32px;
+        --mundi-copy-top: 32px;
+        --mundi-specimen-indent: 24px;
+    }
+
+    .mundipagg-page--pdf-structure .mundi-pdf-hero h1 {
+        font-size: 34px;
+    }
+
+    .mundipagg-page--pdf-structure .mundi-pdf-heading h2,
+    .mundipagg-page--pdf-structure .mundi-pdf-problem h2,
+    .mundipagg-page--pdf-structure .mundi-takeaways > h2,
+    .mundipagg-page--pdf-structure .mundi-neutral-pair h3,
+    .mundipagg-page--pdf-structure .mundi-before-after-demo h3,
+    .mundipagg-page--pdf-structure .mundi-tinted-band h3,
+    .mundipagg-page--pdf-structure .mundi-semantic-comparison h3,
+    .mundipagg-page--pdf-structure .mundi-neutral-showcase h3 {
+        font-size: 34px;
+    }
+
+    .mundipagg-page--pdf-structure .mundi-brand-strip {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .mundipagg-page--pdf-structure .mundi-brand-strip span {
+        aspect-ratio: 3.8;
+    }
+}
+
+@media (max-width: 520px) {
+    .mundipagg-page--pdf-structure .mundi-mode-pair {
+        grid-template-columns: 1fr;
+    }
+}
+
+.mundipagg-page--pdf-structure .mundi-neutral-pair--study h3 {
+    margin-bottom: 18px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.05;
 }

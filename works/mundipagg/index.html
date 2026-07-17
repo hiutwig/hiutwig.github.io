@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eloisa Froes - Product Designer - Works: Mundipagg Color Study</title>
     <link rel="icon" href="../../assets/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../../assets/styles.css?v=mundipagg-story">
+    <link rel="stylesheet" href="../../assets/styles.css?v=mundipagg-figma-faithful">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,304 +23,325 @@
         </div>
     </header>
 
-    <main class="mundipagg-page mundipagg-page--story">
-        <section class="mundi-story-hero">
-            <p class="mundi-story-kicker">Mundipagg Design System / Color Refactor</p>
-            <h1>Turning dark mode from an inverted skin into a color system.</h1>
-            <p class="mundi-story-lede">In 2019, dark mode was not yet the default expectation it is today. Mundipagg already had one, but it behaved like an inverted light theme: visually heavy, hard to scan, and not comfortable enough for developers and clients who used dashboards all day.</p>
-            <div class="mundi-story-meta" aria-label="Project details">
-                <span>Timeline: late 2019</span>
-                <span>Role: Product Designer / UI Specialist</span>
-                <span>Scope: design-system color refactor</span>
-            </div>
+    <main class="mundipagg-page mundipagg-page--pdf-structure">
+        <section class="mundi-pdf-hero">
+            <p class="mundi-eyebrow">Mundipagg's Design System dark mode redesign</p>
+            <h1>Helping the developers, delighting the users. Or vice-versa.</h1>
         </section>
 
-        <figure class="mundi-story-hero-art">
+        <section class="mundi-pdf-visual mundi-pdf-visual--asset" aria-label="Hero image">
             <img src="../../assets/mundipagg/figma/manual%20exports/mundipagg%20-%20hero%2001.png" alt="Mundipagg dark mode color study overview">
-        </figure>
-
-        <section class="mundi-story-evidence">
-            <figure>
-                <img src="../../assets/mundipagg/figma/manual%20exports/mundipag%20-%20antes.png" alt="Mundipagg dark mode before the color refactor">
-                <figcaption>Before: dark mode existed, but hierarchy and contrast were doing too much work with too few colors.</figcaption>
-            </figure>
-            <figure>
-                <img src="../../assets/mundipagg/figma/manual%20exports/mundipagg%20-%20after.png" alt="Mundipagg dashboard after the color refactor">
-                <figcaption>After: surfaces, text, buttons, badges and states had dedicated color decisions.</figcaption>
-            </figure>
         </section>
 
-        <section class="mundi-story-row">
-            <h2>The short version</h2>
-            <div class="mundi-story-copy">
-                <p>We had a very limited palette, and dark mode was treated like the inverse of light mode. That made the product look darker, but not calmer. The interface still strained vision because depth, surfaces, text and interactive states were not separated into meaningful roles.</p>
-                <p>My work was to make the case for a color refactor, define the new color logic with design-system developers, and help leadership see why this was not polish. It was infrastructure.</p>
-            </div>
+        <section class="mundi-pdf-copy-row">
+            <h2>The challenge</h2>
+            <p>In 2019 Mundipagg's (currently Pagar.me, of Stone.co) Design System had a problem: <strong>a small color palette</strong> was <strong>getting in the way of an effective dark mode</strong> and <strong>causing accessibility problems in the UI</strong> with low reading contrast.</p>
         </section>
 
-        <section class="mundi-story-problem">
-            <div class="mundi-story-section-head">
-                <p class="mundi-story-kicker">Problem</p>
-                <h2>A limited palette could not support a serious dark mode.</h2>
+        <section class="mundi-pdf-dark">
+            <img class="mundi-pdf-screen-img" src="../../assets/mundipagg/figma/manual%20exports/mundipagg%20-%20image%2002.png" alt="Mundipagg dark mode dashboard before redesign">
+            <div class="mundi-pdf-text">
+                <p class="mundi-eyebrow">Introduction</p>
+                <p>We created the dark mode option in the DS (called Emerald) as a proof of concept and example of themes and use of components. <strong>However, it ended up instantly preferred by the staff of developers working on the product's dashboard</strong> (devs love dark mode, am I right?).</p>
+                <p>We quickly noticed that our dark mode option was not optimal, and that kick-started a more in-depth investigation. We needed to make the color palette in our design system more adequate to complex colorways, such as a nice and comfortable dark mode for our developers. Moreover, a redesigned color palette would help us tackle accessibility problems in our UI caused by a limited color palette.</p>
             </div>
-            <div class="mundi-problem-grid">
-                <article class="mundi-problem-card">
-                    <h3>What we had</h3>
-                    <div class="mundi-mini-palette" aria-label="Limited original palette">
-                        <span style="--c:#14B8B1">#14B8B1</span>
-                        <span style="--c:#1E8A7D">#1E8A7D</span>
-                        <span style="--c:#112E63">#112E63</span>
-                        <span style="--c:#3289AD">#3289AD</span>
-                    </div>
-                    <p>Brand colors, a small neutral set, and semantic colors that had to do too many jobs.</p>
-                </article>
-                <article class="mundi-problem-card mundi-problem-card--dark">
-                    <h3>What dark mode needed</h3>
-                    <div class="mundi-token-list">
-                        <span>Background</span>
-                        <span>Raised surface</span>
-                        <span>Text primary</span>
-                        <span>Text secondary</span>
-                        <span>Border</span>
-                        <span>Disabled</span>
-                        <span>Semantic states</span>
-                        <span>Action colors</span>
-                    </div>
-                    <p>Distinct roles for hierarchy, legibility, feedback, and implementation.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="mundi-story-dark">
-            <div class="mundi-story-section-head">
-                <p class="mundi-story-kicker">Design Principle</p>
-                <h2>Dark mode is not light mode with the values flipped.</h2>
-                <p>Inspired by Refactoring UI's guidance on depth cues, I treated dark mode as its own environment: closer surfaces become slightly lighter, text needs calibrated contrast, and shadows cannot carry the same visual load they carry on light backgrounds.</p>
-            </div>
-            <div class="mundi-depth-demo" aria-label="Depth cue demonstration">
-                <div class="mundi-depth-panel mundi-depth-panel--light">
-                    <p>Light mode</p>
-                    <div class="mundi-depth-card level-1">Base</div>
-                    <div class="mundi-depth-card level-2">Raised</div>
-                    <div class="mundi-depth-card level-3">Closest</div>
+            <div class="mundi-pdf-meta">
+                <div>
+                    <h3>My role</h3>
+                    <p>Product Designer, UI Specialist leading redesign process: investigation, testing, defining, mapping and implementing the choices in color palette to be integrated in the design system.</p>
                 </div>
-                <div class="mundi-depth-panel mundi-depth-panel--dark">
-                    <p>Dark mode</p>
-                    <div class="mundi-depth-card level-1">Base</div>
-                    <div class="mundi-depth-card level-2">Raised</div>
-                    <div class="mundi-depth-card level-3">Closest</div>
+                <div>
+                    <h3>The team</h3>
+                    <p>Carla Vieira, Gabriela Schirmer and Ronalson Vargas were the frontend developers responsible for the design system, called Emerald.</p>
+                </div>
+                <div>
+                    <h3>Timeline</h3>
+                    <p>Late 2019.</p>
                 </div>
             </div>
         </section>
 
-        <section class="mundi-story-row">
-            <h2>The refactor</h2>
-            <div class="mundi-story-copy">
-                <p>The redesign expanded the palette and reorganized it by role. Instead of asking one gray or one brand color to solve every case, we separated background colors, surface colors, font colors, semantic states, and action colors across light and dark themes.</p>
-                <p>This made the system easier to implement and safer to evolve. It also gave developers a clearer language for discussing UI decisions.</p>
+        <section class="mundi-brand-strip" aria-label="Original brand colors">
+            <span><b>#14B8B1</b></span>
+            <span><b>#1E8A7D</b></span>
+            <span><b>#112E63</b></span>
+            <span><b>#3289AD</b></span>
+        </section>
+
+        <section class="mundi-pdf-copy-row">
+            <h2>Reality</h2>
+            <div>
+                <p>We made Emerald DS with:</p>
+                <ul>
+                    <li>4 brand colors (primary, secondary, tertiary and link color) and respective shades and tints on light and dark mode;</li>
+                    <li>1 neutrals palette in light mode and 1 in dark mode (each with 6 different shades);</li>
+                    <li>4 semantic UI colors (success, error, warning and information) with respective shades and tints.</li>
+                </ul>
             </div>
         </section>
 
-        <section class="mundi-token-system" aria-label="Refactored color token system">
-            <div class="mundi-token-column">
-                <h3>Light mode</h3>
-                <div class="mundi-token-row"><b>Background</b><span style="--c:#F8FAFC"></span><span style="--c:#EEF3F7"></span><span style="--c:#DCE5EB"></span></div>
-                <div class="mundi-token-row"><b>Text</b><span style="--c:#102735"></span><span style="--c:#456270"></span><span style="--c:#8798A2"></span></div>
-                <div class="mundi-token-row"><b>Action</b><span style="--c:#112E63"></span><span style="--c:#14B8B1"></span><span style="--c:#1E8A7D"></span></div>
-            </div>
-            <div class="mundi-token-column mundi-token-column--dark">
-                <h3>Dark mode</h3>
-                <div class="mundi-token-row"><b>Background</b><span style="--c:#071017"></span><span style="--c:#101C24"></span><span style="--c:#1D303B"></span></div>
-                <div class="mundi-token-row"><b>Text</b><span style="--c:#F4F7FA"></span><span style="--c:#B9C7D0"></span><span style="--c:#78909C"></span></div>
-                <div class="mundi-token-row"><b>Action</b><span style="--c:#14B8B1"></span><span style="--c:#99E7E4"></span><span style="--c:#1E8A7D"></span></div>
+        <section class="mundi-pdf-copy-row">
+            <h2>Goal</h2>
+            <div>
+                <p>We identified in Emerald the need for some alterations regarding the current color palette and more importantly the expansion of the palette to comprise a more robust colorway to support different uses on the applications, specially on the dashboard.</p>
+                <p>To attain such goals, we suggested the following changes:</p>
+                <ul>
+                    <li>1 neutrals palette in light mode and 1 in dark mode, optimized for each theme;</li>
+                    <li>Reformulation of 4 semantic UI colors (success, error, warning, and information) with respective shades and tints - prioritizing high contrast score and dark mode compliance;</li>
+                    <li>Redesign of the whole dark mode theme.</li>
+                </ul>
             </div>
         </section>
 
-        <section class="mundi-robust-palette" aria-label="Before and after neutral color palettes">
-            <div class="mundi-story-section-head">
-                <p class="mundi-story-kicker">Expanded palette</p>
-                <h2>From inverted colors to a robust light and dark system.</h2>
-                <p>The first dark mode leaned on a small set of inverted neutrals. The refactor created separate ramps for background, surface, border, disabled, and font colors, so each theme could carry depth and contrast without straining the eye.</p>
+        <section class="mundi-pdf-section">
+            <div class="mundi-pdf-heading">
+                <h2>Making do with a limited palette</h2>
+                <p>Mundipagg's branding from the parent company was minimal and the brand colors are turquoise, green, and blue. There was a need for shades and tints to be iterated from the brand colors to create buttons, badges, alerts, and accent text.</p>
             </div>
-            <div class="mundi-neutral-compare">
-                <article class="mundi-neutral-panel">
+            <div class="mundi-palette-study" aria-label="Button and brand color palette study">
+                <div class="mundi-state-demo">
+                    <div class="mundi-button-stack">
+                        <p>Light Mode</p>
+                        <button>Button</button>
+                        <button>Button</button>
+                        <button>Button</button>
+                        <button>Button</button>
+                    </div>
+                    <div class="mundi-swatch-table">
+                        <p>Light Mode</p>
+                        <div class="mundi-swatch-row"><b>Base</b><span></span><span></span><span></span><span></span></div>
+                        <div class="mundi-swatch-row"><b>Shade</b><span></span><span></span><span></span><span></span></div>
+                        <div class="mundi-swatch-row"><b>Tint</b><span></span><span></span><span></span><span></span></div>
+                    </div>
+                </div>
+                <div class="mundi-state-demo is-dark">
+                    <div class="mundi-button-stack">
+                        <p>Dark Mode</p>
+                        <button>Button</button>
+                        <button>Button</button>
+                        <button>Button</button>
+                        <button>Button</button>
+                    </div>
+                    <div class="mundi-swatch-table">
+                        <p>Dark Mode</p>
+                        <div class="mundi-swatch-row"><b>Base</b><span></span><span></span><span></span><span></span></div>
+                        <div class="mundi-swatch-row"><b>Shade</b><span></span><span></span><span></span><span></span></div>
+                        <div class="mundi-swatch-row"><b>Tint</b><span></span><span></span><span></span><span></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mundi-hex-grid" aria-label="Mundipagg brand color hex codes">
+                <span style="--swatch: #14B8B1;"><b>#14B8B1</b><small>Primary turquoise</small></span>
+                <span style="--swatch: #1E8A7D;"><b>#1E8A7D</b><small>Secondary green</small></span>
+                <span style="--swatch: #112E63;"><b>#112E63</b><small>Tertiary blue</small></span>
+                <span style="--swatch: #3289AD;"><b>#3289AD</b><small>Link blue</small></span>
+            </div>
+            <p class="mundi-wide-copy">To meet the different design needs and visual hierarchy levels of headers, background and text, it became clear our current neutrals' palette was incomplete. Currently, the neutrals' palette encompasses 6 dark tones and 6 light tones, alternated in use (text and background) to create a light and a dark theme.</p>
+            <div class="mundi-neutral-pair mundi-neutral-pair--study" aria-label="Old neutral palette for light and dark mode">
+                <div>
+                    <h3>Light Mode</h3>
+                    <div class="mundi-neutral-scale is-light is-before"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                </div>
+                <div class="is-dark-panel">
+                    <h3>Dark Mode</h3>
+                    <div class="mundi-neutral-scale is-dark is-before"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                </div>
+            </div>
+            <p class="mundi-wide-copy">To easy semantically identify the 4 different stages of attention to users (success, error, warning, and information), Emerald has a semantic UI color palette adapted for dark and light mode, with shadow and accent colors (base color, shades, and tints).</p>
+            <div class="mundi-semantic-demo mundi-semantic-demo--tokens" aria-label="Semantic UI palette for light and dark mode">
+                <div class="mundi-semantic-set">
+                    <p>Light Mode</p>
+                    <div class="mundi-token-grid mundi-token-grid--semantic">
+                        <span style="--swatch:#2ecc71"></span><span style="--swatch:#f7c948"></span><span style="--swatch:#d93535"></span><span style="--swatch:#7b6ef6"></span>
+                        <span style="--swatch:#1f8f4f"></span><span style="--swatch:#b48400"></span><span style="--swatch:#a32323"></span><span style="--swatch:#4f45c8"></span>
+                        <span style="--swatch:#c8f2ca"></span><span style="--swatch:#fff0bf"></span><span style="--swatch:#fbd6d6"></span><span style="--swatch:#dfdcfb"></span>
+                    </div>
+                </div>
+                <div class="mundi-semantic-set mundi-semantic-set--dark">
+                    <p>Dark Mode</p>
+                    <div class="mundi-token-grid mundi-token-grid--semantic">
+                        <span style="--swatch:#50d48b"></span><span style="--swatch:#ffd45a"></span><span style="--swatch:#ff6b7d"></span><span style="--swatch:#8f80ff"></span>
+                        <span style="--swatch:#2d7d55"></span><span style="--swatch:#8a6405"></span><span style="--swatch:#8c2432"></span><span style="--swatch:#4537a8"></span>
+                        <span style="--swatch:#102f21"></span><span style="--swatch:#35290a"></span><span style="--swatch:#351319"></span><span style="--swatch:#1b1640"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mundi-pdf-dark">
+            <div class="mundi-pdf-copy-row is-inverted">
+                <h2>Redesign proposal</h2>
+                <div>
+                    <p>To meet the expectations of users and staff increasingly more supportive of dark mode theme on interfaces, it was made an extensive chromatic study to reevaluate and redesign our current dark mode theme option.</p>
+                    <ul>
+                        <li>Observation of chromatic hierarchies, not only invert colors values for dark and light mode;</li>
+                        <li>Respect visual depth cues and the conventional use of shadows, even in dark mode;</li>
+                        <li>Suggestion of a much more ample neutrals color palette to better provide division of space and hierarchic relationships;</li>
+                        <li>Suggestion of two distinct but cohesive chromatic families for both dark and light mode.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mundi-pdf-problem">
+                <p class="mundi-eyebrow">The problem</p>
+                <h2>Why a theme made to reduce eye strain was not bringing visual comfort?</h2>
+            </div>
+            <div class="mundi-pdf-copy-row is-inverted">
+                <h2>A broken dark mode</h2>
+                <div>
+                    <p>As previously stated, our users and staff were opting for our dark mode - but it was not a good one. It was a proof of concept and mostly used as a visualization tool to sell the idea of a design system to the company.</p>
+                    <p>Talking to developers, they agreed that our dark mode theme was not as "cool to look at" as others, but couldn't really articulate why. Still, even bad dark mode was better than no dark mode, and not only for our devs, but for users too, since it was being so widely preferred.</p>
+                    <p>Our bad dark mode gave no visual comfort, which got me thinking: what's wrong with it? And how do we fix it?</p>
+                </div>
+            </div>
+            <div class="mundi-depth-study" aria-label="Before dark mode placeholder">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+        </section>
+
+        <section class="mundi-pdf-copy-row">
+            <h2>References and studies</h2>
+            <div>
+                <p>We learned a lot about visual depth cues. It was quite humbling to see that many principles that are no-brainers when dealing with a light interface became weird and foreign and harder to grasp when designing a dark interface.</p>
+                <p>The more I dug into how to better construct a full color palette to fulfill dark and light interface needs, the more I realized that we needed a lot more neutrals than we had.</p>
+            </div>
+        </section>
+
+        <section class="mundi-reference-board" aria-label="Reference studies">
+            <img src="../../assets/mundipagg/figma/manual%20exports/mundipagg%20-%20ui%20ref.png" alt="Visual depth cue and dark mode reference studies">
+        </section>
+
+        <section class="mundi-pdf-dark mundi-takeaways">
+            <h2>Key takeaways</h2>
+            <article>
+                <h3>Too many neutrals is just enough neutrals</h3>
+                <p>We needed a much more robust palette of neutrals than we first anticipated to convey the right depth cues intended for a dark mode theme effectively.</p>
+            </article>
+            <article>
+                <h3>Remember the secondary brand colors</h3>
+                <p>Turquoise is a complicated primary brand color to work with when there's not much branding elements or supporting graphic assets. The tertiary brand color, a beautiful dark blue, was actually a better alternative to exploit in light mode.</p>
+            </article>
+            <article>
+                <h3>Follow the depth cues</h3>
+                <p>Interfaces try to emulate real life, and the closer an object is, the brighter and lighter it appears. The further away it is, the darker and dimmer it appears.</p>
+            </article>
+        </section>
+
+        <section class="mundi-pdf-copy-row">
+            <h2>Results</h2>
+            <div>
+                <p>Our redesign over exceeded the product team's expectations. We used color to solve not only a seemingly aesthetic problem (improve the dark mode) but actually tackled accessibility and usability issues.</p>
+                <p>We received compliments from users and from staff, and it was very satisfying when developers of other squads would come to my desk to compliment me on the "new dark mode" in person.</p>
+            </div>
+        </section>
+
+        <section class="mundi-pdf-copy-row">
+            <h2>Brand colors</h2>
+            <div>
+                <p>We proposed no brand color changes, but we did implement the use of the tertiary brand color (dark blue) in buttons and accents in light mode instead of the primary brand color.</p>
+                <p>Furthermore, in dark mode, we kept the primary brand color and changed the use of a white text to the secondary green shade color.</p>
+                <p>We used the Sketch Color Contrast Analyzer Plugin to assure the AAA WCAG 2.1 accessibility standard on text + background.</p>
+            </div>
+        </section>
+
+        <section class="mundi-before-after-demo">
+            <h3>Before</h3>
+            <div class="mundi-mode-pair">
+                <div><p>Light Mode</p><button>+ Criar conta</button><small>AA Failed - 2.4:1</small></div>
+                <div class="is-dark"><p>Dark Mode</p><button>+ Criar conta</button><small>AA Failed - 2.4:1</small></div>
+            </div>
+            <h3>After</h3>
+            <div class="mundi-mode-pair">
+                <div><p>Light Mode</p><button class="is-blue">+ Criar conta</button><small>AAA passed - 14.8:1</small></div>
+                <div class="is-dark"><p>Dark Mode</p><button>+ Criar conta</button><small>AA passed - 4.9:1</small></div>
+            </div>
+        </section>
+
+        <section class="mundi-pdf-copy-row">
+            <h2>Neutrals</h2>
+            <p>It became necessary to establish a division between chromatic families intended for use in dark mode and light mode, to simplify the implementation process and avoid that each theme was just the chromatic inverse of the other.</p>
+        </section>
+
+        <section class="mundi-tinted-band">
+            <h3>Before</h3>
+            <img class="mundi-pdf-asset" src="../../assets/mundipagg/figma/manual%20exports/mundipag%20-%20antes.png" alt="Before redesign dark mode product screens">
+            <h3>After</h3>
+            <img class="mundi-pdf-asset" src="../../assets/mundipagg/figma/manual%20exports/mundipagg%20-%20after.png" alt="After redesign dark mode product screens">
+        </section>
+
+        <section class="mundi-pdf-dark">
+            <div class="mundi-neutral-showcase">
+                <h3>After</h3>
+                <div class="mundi-neutral-system" aria-label="Expanded neutral palette after redesign">
+                    <div>
+                        <p>Light Mode</p>
+                        <div class="mundi-neutral-scale is-light is-after"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                    </div>
+                    <div>
+                        <p>Dark Mode</p>
+                        <div class="mundi-neutral-scale is-dark is-after"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                    </div>
+                </div>
+                <p>The new neutrals' palette is much more robust, allowing for a more subtle gradient colorway and a nuanced use of the UI.</p>
+            </div>
+        </section>
+
+        <section class="mundi-pdf-copy-row">
+            <h2>Semantic UI palette</h2>
+            <div>
+                <p>The semantic states color palette (success, error, alert, and information) was updated to pass effectively the accessibility test and also bring more cohesion to the overall chromatic unity of the whole palette.</p>
+                <p>We used the Sketch Color Contrast Analyzer Plugin to assure the AAA WCAG 2.1 accessibility standard on text + background.</p>
+            </div>
+        </section>
+
+        <section class="mundi-semantic-comparison" aria-label="Semantic colors WCAG comparison">
+            <div class="mundi-wcag-compare">
+                <div>
                     <h3>Before</h3>
-                    <div class="mundi-neutral-set">
-                        <b>Light mode</b>
-                        <div class="mundi-neutral-circles" aria-label="Before light mode neutral palette">
-                            <span style="--c:#FFFFFF"></span><span style="--c:#F8FAFC"></span><span style="--c:#E9F1F6"></span><span style="--c:#DDE9F0"></span><span style="--c:#B8CCD8"></span><span style="--c:#8FA8B4"></span>
-                        </div>
-                    </div>
-                    <div class="mundi-neutral-set mundi-neutral-set--dark">
-                        <b>Dark mode</b>
-                        <div class="mundi-neutral-circles" aria-label="Before dark mode neutral palette">
-                            <span style="--c:#06141C"></span><span style="--c:#08202B"></span><span style="--c:#173747"></span><span style="--c:#31586B"></span><span style="--c:#526F80"></span><span style="--c:#7896A5"></span>
-                        </div>
-                    </div>
-                </article>
-                <article class="mundi-neutral-panel mundi-neutral-panel--after">
+                    <div class="mundi-wcag-row"><button class="is-success-before">Aceitar</button><span class="is-fail">AA Failed - 2.0:1</span></div>
+                    <div class="mundi-wcag-row"><button class="is-warning-before">Alerta</button><span>AAA passed - 11.4:1</span></div>
+                    <div class="mundi-wcag-row"><button class="is-error-before">Cancelar</button><span>AA passed - 5.1:1</span></div>
+                    <div class="mundi-wcag-row"><button class="is-info-before">Info</button><span class="is-fail">AA Failed - 3.3:1</span></div>
+                </div>
+                <div>
                     <h3>After</h3>
-                    <div class="mundi-neutral-set">
-                        <b>Light mode</b>
-                        <div class="mundi-neutral-circles" aria-label="After light mode neutral palette">
-                            <span style="--c:#000000"></span><span style="--c:#111315"></span><span style="--c:#1B2023"></span><span style="--c:#252C31"></span><span style="--c:#343B42"></span><span style="--c:#5D6670"></span><span style="--c:#79818D"></span>
-                        </div>
-                        <div class="mundi-neutral-circles" aria-label="After light mode surface palette">
-                            <span style="--c:#9FA7B0"></span><span style="--c:#B6BEC5"></span><span style="--c:#C9D0D7"></span><span style="--c:#D6DDE4"></span><span style="--c:#E0E6EB"></span><span style="--c:#EDF2F5"></span><span style="--c:#F7FAFC"></span><span style="--c:#FFFFFF"></span>
-                        </div>
-                    </div>
-                    <div class="mundi-neutral-set mundi-neutral-set--dark">
-                        <b>Dark mode</b>
-                        <div class="mundi-neutral-circles" aria-label="After dark mode font palette">
-                            <span style="--c:#FFFFFF"></span><span style="--c:#F1F3F5"></span><span style="--c:#DFE2E5"></span><span style="--c:#C9CDD2"></span><span style="--c:#A8ADB2"></span><span style="--c:#969CA1"></span><span style="--c:#737779"></span>
-                        </div>
-                        <div class="mundi-neutral-circles" aria-label="After dark mode background palette">
-                            <span style="--c:#44484B"></span><span style="--c:#3B3F42"></span><span style="--c:#323438"></span><span style="--c:#29292D"></span><span style="--c:#202024"></span><span style="--c:#171B1C"></span><span style="--c:#101112"></span><span class="is-outline" style="--c:#000000"></span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section class="mundi-story-study">
-            <div class="mundi-story-section-head">
-                <p class="mundi-story-kicker">Color studies</p>
-                <h2>From samples to systematic decisions.</h2>
-            </div>
-            <div class="mundi-study-grid">
-                <article>
-                    <h3>Buttons</h3>
-                    <div class="mundi-button-lab">
-                        <button>Primary</button>
-                        <button class="is-secondary">Secondary</button>
-                        <button class="is-quiet">Quiet</button>
-                        <button class="is-dark">Dark theme</button>
-                    </div>
-                    <p>Action colors moved away from relying only on turquoise, especially where contrast failed.</p>
-                </article>
-                <article>
-                    <h3>Semantic states</h3>
-                    <div class="mundi-state-lab">
-                        <span class="success">Success</span>
-                        <span class="warning">Warning</span>
-                        <span class="danger">Error</span>
-                        <span class="info">Info</span>
-                    </div>
-                    <p>Success, warning, error and information were tuned for readability and state recognition.</p>
-                </article>
-            </div>
-            <div class="mundi-wcag-proof" aria-label="Semantic UI WCAG compliance proof">
-                <div class="mundi-story-section-head">
-                    <p class="mundi-story-kicker">Semantic UI</p>
-                    <h2>Color names had to map to meaning and accessibility.</h2>
-                    <p>The semantic UI layer made success, warning, danger, and info states predictable across products. The final palette also gave us concrete proof: key combinations moved from failing contrast checks to AA or AAA compliance.</p>
-                </div>
-                <div class="mundi-wcag-compare">
-                    <article class="mundi-wcag-card">
-                        <h3>Before</h3>
-                        <div class="mundi-wcag-list">
-                            <div class="mundi-wcag-row"><span class="mundi-ui-button" style="--button-bg:#35CD68;--button-fg:#FFFFFF;">ACEITAR</span><span class="mundi-contrast-badge is-fail"><i>NO</i> AA Failed - 2.0:1</span></div>
-                            <div class="mundi-wcag-row"><span class="mundi-ui-button" style="--button-bg:#FFCB33;--button-fg:#11202D;">ALERTA</span><span class="mundi-contrast-badge is-pass"><i>OK</i> AAA passed - 11.4:1</span></div>
-                            <div class="mundi-wcag-row"><span class="mundi-ui-button" style="--button-bg:#D9363E;--button-fg:#FFFFFF;">CANCELAR</span><span class="mundi-contrast-badge is-pass"><i>OK</i> AA passed - 5.1:1</span></div>
-                            <div class="mundi-wcag-row"><span class="mundi-ui-button" style="--button-bg:#8172F5;--button-fg:#FFFFFF;">INFO</span><span class="mundi-contrast-badge is-fail"><i>NO</i> AA Failed - 3.3:1</span></div>
-                        </div>
-                    </article>
-                    <article class="mundi-wcag-card">
-                        <h3>After</h3>
-                        <div class="mundi-wcag-list">
-                            <div class="mundi-wcag-row"><span class="mundi-ui-button" style="--button-bg:#008B36;--button-fg:#FFFFFF;">ACEITAR</span><span class="mundi-contrast-badge is-pass"><i>OK</i> AAA passed - 4.5:1</span></div>
-                            <div class="mundi-wcag-row"><span class="mundi-ui-button" style="--button-bg:#FFC21C;--button-fg:#11202D;">ALERTA</span><span class="mundi-contrast-badge is-pass"><i>OK</i> AAA passed - 10.3:1</span></div>
-                            <div class="mundi-wcag-row"><span class="mundi-ui-button" style="--button-bg:#D9045D;--button-fg:#FFFFFF;">CANCELAR</span><span class="mundi-contrast-badge is-pass"><i>OK</i> AA passed - 5.5:1</span></div>
-                            <div class="mundi-wcag-row"><span class="mundi-ui-button" style="--button-bg:#6657F5;--button-fg:#FFFFFF;">INFO</span><span class="mundi-contrast-badge is-pass"><i>OK</i> AA passed - 4.6:1</span></div>
-                        </div>
-                    </article>
-                </div>
-                <div class="mundi-wcag-dark-compare" aria-label="Dark mode tag contrast before and after">
-                    <article class="mundi-wcag-card mundi-wcag-card--dark">
-                        <h3>Before</h3>
-                        <div class="mundi-tag-grid">
-                            <span class="mundi-tag" style="--tag-bg:#E6E2FF;--tag-fg:#3E3791;">Novo</span>
-                            <span class="mundi-tag" style="--tag-bg:#FFD9DE;--tag-fg:#9B383B;">Novo</span>
-                            <span class="mundi-tag" style="--tag-bg:#463D7A;--tag-fg:#C7C0FF;">Novo</span>
-                            <span class="mundi-tag" style="--tag-bg:#513032;--tag-fg:#F1B6BD;">Novo</span>
-                            <span class="mundi-tag" style="--tag-bg:#D9F5DC;--tag-fg:#2D7444;">Novo</span>
-                            <span class="mundi-tag" style="--tag-bg:#FFF1C8;--tag-fg:#B08A12;">Novo</span>
-                        </div>
-                        <span class="mundi-contrast-badge is-fail"><i>NO</i> AA Failed - 2.6:1</span>
-                    </article>
-                    <article class="mundi-wcag-card mundi-wcag-card--dark">
-                        <h3>After</h3>
-                        <div class="mundi-tag-stage">
-                            <div class="mundi-tag-grid">
-                                <span class="mundi-tag" style="--tag-bg:#E6E2FF;--tag-fg:#3E3791;">Novo</span>
-                                <span class="mundi-tag" style="--tag-bg:#FFD9DE;--tag-fg:#9B383B;">Novo</span>
-                                <span class="mundi-tag" style="--tag-bg:#463D7A;--tag-fg:#C7C0FF;">Novo</span>
-                                <span class="mundi-tag" style="--tag-bg:#513032;--tag-fg:#F1B6BD;">Novo</span>
-                                <span class="mundi-tag" style="--tag-bg:#D9F5DC;--tag-fg:#2D7444;">Novo</span>
-                                <span class="mundi-tag" style="--tag-bg:#FFF1C8;--tag-fg:#8B6900;">Novo</span>
-                            </div>
-                        </div>
-                        <span class="mundi-contrast-badge is-pass"><i>OK</i> AA passed - 4.6:1</span>
-                    </article>
+                    <div class="mundi-wcag-row"><button class="is-success-after">Aceitar</button><span>AAA passed - 4.5:1</span></div>
+                    <div class="mundi-wcag-row"><button class="is-warning-after">Alerta</button><span>AAA passed - 10.3:1</span></div>
+                    <div class="mundi-wcag-row"><button class="is-error-after">Cancelar</button><span>AA passed - 5.5:1</span></div>
+                    <div class="mundi-wcag-row"><button class="is-info-after">Info</button><span>AA passed - 4.6:1</span></div>
                 </div>
             </div>
-            <figure class="mundi-study-reference">
-                <img src="../../assets/mundipagg/figma/manual%20exports/mundipagg%20-%20ui%20ref.png" alt="Reference studies for dark mode depth cues and palette structure">
-                <figcaption>Research and internal studies helped translate color theory into rules developers could use.</figcaption>
-            </figure>
         </section>
 
-        <section class="mundi-story-row mundi-story-row--leadership">
-            <h2>Making the case for refactoring</h2>
-            <div class="mundi-story-copy">
-                <p>The hardest part was not choosing better colors. It was brokering alignment with development leadership that a color refactor would pay off.</p>
-                <p>I framed the work as a product-quality investment: fewer accessibility problems, clearer implementation rules, and a dark mode that developers would actually want to use every day.</p>
+        <section class="mundi-pdf-dark">
+            <div class="mundi-pdf-heading">
+                <h2>The new darkmode</h2>
+                <p>Now, with the new color palette, it was possible to build a much more visually pleasing, comfortable and semantically accurate dark mode.</p>
+            </div>
+            <img class="mundi-pdf-screen-img" src="../../assets/mundipagg/figma/manual%20exports/mundipagg%20-%20after.png" alt="New dark mode dashboard after redesign">
+        </section>
+
+        <section class="mundi-pdf-copy-row">
+            <h2>A brand new color story</h2>
+            <div>
+                <p>Observing updated studies and cases in dark mode and design of dark interfaces, we delivered the new color palette and the redesign of the Dark Mode theme on all Mundipagg's product dashboards.</p>
+                <p>We altered background color, a more vast choice of grays for hierarchy, relationships between background colors and titles in cards and boxes, badge colors, and button colors.</p>
             </div>
         </section>
 
-        <section class="mundi-impact-grid">
-            <article>
-                <b>Objective</b>
-                <h3>WCAG compliant</h3>
-                <p>Color combinations were tested and adjusted until key UI text and controls met accessibility standards.</p>
-            </article>
-            <article>
-                <b>Subjective</b>
-                <h3>More comfortable</h3>
-                <p>Testing and surveys showed clients were pleased with the outcome.</p>
-            </article>
-            <article>
-                <b>Internal adoption</b>
-                <h3>Developers liked it</h3>
-                <p>The strongest signal came from developers, who noticed and complimented the new dark mode in daily use.</p>
-            </article>
+        <section class="mundi-pdf-copy-row">
+            <h2>What about the light mode?</h2>
+            <p>Although what motivated this redesign was the need for a better dark mode, the new neutral chromatic family enhanced the light mode experience as well. With a more robust palette, it was possible to design a more cohesive dashboard interface, exploring the grays for a more suitable and visually comfortable experience in light mode.</p>
         </section>
 
-        <section class="mundi-story-lightmode">
-            <div class="mundi-story-section-head">
-                <p class="mundi-story-kicker">Light mode</p>
-                <h2>The refactor improved the original theme too.</h2>
-                <p>Even though dark mode motivated the work, separating chromatic families also made light mode cleaner. The new palette created better surface hierarchy and a more comfortable dashboard without relying on heavy contrast everywhere.</p>
-            </div>
-            <div class="mundi-lightmode-grid">
-                <figure>
-                    <img src="../../assets/mundipagg/figma/manual%20exports/mundipagg%20-%20lightbefore.png" alt="Mundipagg light mode before the color refactor">
-                    <figcaption>Before: product screenshot.</figcaption>
-                </figure>
-                <figure>
-                    <img src="../../assets/mundipagg/figma/manual%20exports/mundipagg-lightafter.png" alt="Mundipagg light mode after the color refactor">
-                    <figcaption>After: color test mockup.</figcaption>
-                </figure>
+        <section class="mundi-tinted-band">
+            <div class="mundi-before-after">
+                <div><h3>Before</h3><img class="mundi-pdf-asset" src="../../assets/mundipagg/figma/manual%20exports/mundipagg%20-%20lightbefore.png" alt="Light mode product screenshot before redesign"><p>Product screenshot</p></div>
+                <div><h3>After</h3><img class="mundi-pdf-asset" src="../../assets/mundipagg/figma/manual%20exports/mundipagg-lightafter.png" alt="Light mode color test mockup after redesign"><p>Color test mockup</p></div>
             </div>
         </section>
 
-        <section class="mundi-story-dark mundi-story-final">
-            <div class="mundi-story-section-head">
-                <p class="mundi-story-kicker">After</p>
-                <h2>A color system that could scale with the product.</h2>
-                <p>The result was not just a prettier dashboard. It was a more usable interface, a more maintainable design system, and a clearer collaboration model between design and engineering.</p>
-            </div>
-            <img src="../../assets/mundipagg/figma/manual%20exports/mundipagg%20-%20after.png" alt="Final dark mode dashboard after color refactor">
+        <section class="mundi-pdf-thanks">
+            <p>Thank you for reading :)</p>
         </section>
     </main>
 
