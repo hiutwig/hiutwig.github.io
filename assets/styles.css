@@ -4965,6 +4965,7 @@ video {
 
 .mundipagg-page--pdf-structure .mundi-palette-study {
     width: min(100%, 1000px);
+    margin-bottom: 0;
     margin-right: auto;
     margin-left: auto;
     gap: 0;
@@ -5057,22 +5058,23 @@ video {
     margin-left: -14px;
 }
 
-.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:nth-child(1) { background: #000000; }
-.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:nth-child(2) { background: #121416; }
-.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:nth-child(3) { background: #1e2225; }
-.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:nth-child(4) { background: #2a3035; }
-.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:nth-child(5) { background: #363d44; }
-.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:nth-child(6) { background: #5f6873; }
-.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:nth-child(7) { background: #7c858f; }
-.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:nth-child(8) { background: #ffffff; border: 1px solid #dfe5ea; }
-.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-after span:nth-child(1) { background: #ffffff; }
-.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-after span:nth-child(2) { background: #f1f3f4; }
-.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-after span:nth-child(3) { background: #d8dadd; }
-.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-after span:nth-child(4) { background: #bfc2c6; }
-.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-after span:nth-child(5) { background: #a7aaad; }
-.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-after span:nth-child(6) { background: #8e9295; }
-.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-after span:nth-child(7) { background: #6f7272; }
-.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-after span:nth-child(8) { background: #000000; border: 1px solid #242424; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:nth-child(1) { background: #141719; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:first-child { border: 0; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:nth-child(2) { background: #202428; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:nth-child(3) { background: #2d3338; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:nth-child(4) { background: #3d454c; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:nth-child(5) { background: #58636d; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:nth-child(6) { background: #76818b; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:nth-child(7) { background: #9aa3ab; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-light.is-after span:nth-child(8) { background: #e9edf0; border: 0; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-after span:nth-child(1) { background: #f4f5f6; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-after span:nth-child(2) { background: #e2e5e7; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-after span:nth-child(3) { background: #cdd2d6; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-after span:nth-child(4) { background: #b3bac0; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-after span:nth-child(5) { background: #9aa2a7; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-after span:nth-child(6) { background: #808889; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-after span:nth-child(7) { background: #5f6260; }
+.mundipagg-page--pdf-structure .mundi-neutral-scale.is-dark.is-after span:nth-child(8) { background: #181a1b; border: 0; }
 
 .mundipagg-page--pdf-structure .mundi-wcag-compare {
     display: grid;
@@ -5092,6 +5094,8 @@ video {
 }
 
 .mundipagg-page--pdf-structure .mundi-wcag-row button {
+    justify-self: start;
+    width: 160px;
     height: 44px;
     border: 0;
     border-radius: 6px;
@@ -5105,6 +5109,8 @@ video {
 .mundipagg-page--pdf-structure .mundi-wcag-row span {
     display: inline-flex;
     align-items: center;
+    justify-self: start;
+    width: fit-content;
     gap: 8px;
     min-height: 32px;
     padding: 6px 12px;
@@ -5190,6 +5196,11 @@ video {
     .mundipagg-page--pdf-structure .mundi-wcag-row button {
         width: min(180px, 100%);
     }
+
+    .mundipagg-page--pdf-structure .mundi-wcag-row span {
+        width: min(180px, 100%);
+        justify-content: center;
+    }
 }
 
 @media (max-width: 430px) {
@@ -5209,6 +5220,7 @@ video {
     --mundi-copy-top: 48px;
     --mundi-copy-gap: 82px;
     --mundi-specimen-indent: clamp(32px, 7vw, 96px);
+    --mundi-specimen-dot: 48px;
     --mundi-left: 250px;
     --mundi-gap: var(--mundi-copy-gap);
 }
@@ -5277,6 +5289,18 @@ video {
 .mundipagg-page--pdf-structure .mundi-pdf-thanks {
     padding-top: var(--mundi-section);
     padding-bottom: var(--mundi-section);
+}
+
+.mundipagg-page--pdf-structure .mundi-palette-study + .mundi-hex-grid {
+    margin-top: 0;
+}
+
+.mundipagg-page--pdf-structure .mundi-pdf-screen-img {
+    margin-bottom: 48px;
+}
+
+.mundipagg-page--pdf-structure .mundi-pdf-dark .mundi-pdf-screen-img:last-child {
+    margin-bottom: 0;
 }
 
 .mundipagg-page--pdf-structure .mundi-pdf-heading {
@@ -5387,19 +5411,22 @@ video {
 .mundipagg-page--pdf-structure .mundi-semantic-demo--tokens {
     display: grid;
     justify-content: start;
-    max-width: min(560px, calc(100% - var(--mundi-specimen-indent)));
+    width: min(100%, 760px);
+    max-width: calc(100% - var(--mundi-specimen-indent));
     margin-left: var(--mundi-specimen-indent);
     margin-right: 0;
 }
 
 .mundipagg-page--pdf-structure .mundi-neutral-pair--study {
-    gap: 24px;
+    grid-template-columns: repeat(2, minmax(0, max-content));
+    gap: 32px clamp(40px, 6vw, 72px);
 }
 
 .mundipagg-page--pdf-structure .mundi-semantic-demo--tokens {
-    grid-template-columns: 1fr;
-    gap: 32px;
+    grid-template-columns: repeat(2, minmax(0, max-content));
+    gap: 32px clamp(48px, 7vw, 88px);
     padding: 0;
+    margin-bottom: 48px;
 }
 
 .mundipagg-page--pdf-structure .mundi-neutral-pair--study > div,
@@ -5408,7 +5435,7 @@ video {
 }
 
 .mundipagg-page--pdf-structure .mundi-neutral-pair--study .mundi-neutral-scale span {
-    width: 56px;
+    width: var(--mundi-specimen-dot);
     margin-left: -8px;
 }
 
@@ -5417,8 +5444,8 @@ video {
 }
 
 .mundipagg-page--pdf-structure .mundi-token-grid--semantic {
-    grid-template-columns: repeat(4, 56px);
-    gap: 12px;
+    grid-template-columns: repeat(4, var(--mundi-specimen-dot));
+    gap: 10px;
     justify-content: start;
 }
 
@@ -5530,6 +5557,17 @@ video {
     width: fit-content;
 }
 
+.mundipagg-page--pdf-structure .mundi-before-after {
+    gap: 32px;
+}
+
+.mundipagg-page--pdf-structure .mundi-before-after p {
+    margin-top: 4px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
 .mundipagg-page--pdf-structure .mundi-takeaways article,
 .mundipagg-page--pdf-structure .mundi-takeaways article + article {
     max-width: 760px;
@@ -5548,6 +5586,8 @@ video {
         --mundi-copy-top: 48px;
         --mundi-copy-gap: 32px;
         --mundi-left: 1fr;
+        --mundi-specimen-indent: 24px;
+        --mundi-specimen-dot: 48px;
     }
 
     .mundipagg-page--pdf-structure .mundi-pdf-copy-row,
@@ -5564,6 +5604,11 @@ video {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 16px;
     }
+
+    .mundipagg-page--pdf-structure .mundi-before-after {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
 }
 
 @media (max-width: 680px) {
@@ -5571,6 +5616,7 @@ video {
         --mundi-section: 32px;
         --mundi-copy-top: 32px;
         --mundi-specimen-indent: 24px;
+        --mundi-specimen-dot: 48px;
     }
 
     .mundipagg-page--pdf-structure .mundi-pdf-hero h1 {
@@ -5599,8 +5645,36 @@ video {
 }
 
 @media (max-width: 520px) {
-    .mundipagg-page--pdf-structure .mundi-mode-pair {
+    .mundipagg-page--pdf-structure .mundi-mode-pair,
+    .mundipagg-page--pdf-structure .mundi-neutral-pair--study,
+    .mundipagg-page--pdf-structure .mundi-semantic-demo--tokens {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 1180px) {
+    .mundipagg-page--pdf-structure {
+        --mundi-specimen-indent: 0px;
+        --mundi-specimen-dot: 56px;
+    }
+
+    .mundipagg-page--pdf-structure .mundi-pdf-section {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .mundipagg-page--pdf-structure .mundi-wide-copy,
+    .mundipagg-page--pdf-structure .mundi-neutral-pair--study,
+    .mundipagg-page--pdf-structure .mundi-semantic-demo--tokens {
+        width: min(100%, 1000px);
+        max-width: 1000px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .mundipagg-page--pdf-structure .mundi-neutral-pair--study,
+    .mundipagg-page--pdf-structure .mundi-semantic-demo--tokens {
+        justify-content: center;
     }
 }
 
