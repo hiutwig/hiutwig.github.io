@@ -16,10 +16,19 @@
 .fiti-media figure { margin: 0; min-width: 0; }
 .fiti-page img { display: block; width: 100%; height: auto; max-width: 393px; margin: 0 auto; }
 .fiti-page figcaption { font-size: 14px; font-weight: 400; line-height: 1.5; margin-top: 16px; }
-.fiti-overview > figure:first-child { padding-top: 48px; }
-.fiti-before { align-items: center; margin-top: 48px; }
+.fiti-overview { gap: 32px; }
+.fiti-screen-preview { max-height: 560px; overflow-y: auto; border-radius: 8px; scrollbar-width: thin; scrollbar-color: #819b8a #eaefe9; }
+.fiti-media figure > img { border-radius: 8px; }
+.fiti-screen-preview:focus-visible { outline: 2px solid var(--portfolio-blue); outline-offset: 4px; }
+.fiti-overview .fiti-screen-preview img { width: 100%; max-width: none; margin: 0; }
+.fiti-overview figcaption a { display: block; margin-top: 8px; width: fit-content; }
+.fiti-before { align-items: start; gap: 32px; margin-top: 48px; }
+.fiti-before figure { width: 100%; max-width: 361px; margin: 0 auto; }
+.fiti-before-context { position: relative; overflow: hidden; border-radius: 8px; }
+.fiti-before-context img { width: 100%; }
+.fiti-card-highlight { position: absolute; top: 78.88%; left: 4.07%; width: 91.86%; height: 11.62%; border: 2px solid var(--portfolio-blue); border-radius: 8px; pointer-events: none; }
 .fiti-notes h2 { margin-bottom: 16px; }
-.fiti-notes ul { padding-left: 20px; margin-top: 16px; }
+.fiti-notes ul { padding-left: 20px; margin-top: 0; }
 .fiti-notes li + li { margin-top: 12px; }
 .fiti-page .fiti-statement { margin: 64px 0 48px; max-width: 760px; }
 .fiti-page .fiti-statement h2 { font-size: 36px; line-height: 1.2; font-weight: 500; margin-bottom: 24px; }
@@ -138,7 +147,7 @@
   .fiti-intro h1 { font-size: 40px; }
   .fiti-page .fiti-statement h2 { font-size: 36px; }
   .fiti-before { grid-template-columns: 1fr; }
-  .fiti-before figure { max-width: 361px; margin: auto; }
+  .fiti-before figure { width: 100%; max-width: 361px; margin: auto; }
   .case-study-fiti header .container { flex-wrap: wrap; gap: 16px; }
 }
 @media (max-width: 520px) {
@@ -146,7 +155,8 @@
   .fiti-intro { padding-top: 40px; }
   .fiti-intro h1 { font-size: 36px; }
   .fiti-media { grid-template-columns: 1fr; gap: 32px; padding: 20px; }
-  .fiti-overview > figure:first-child, .fiti-detail > figure:nth-child(2) { padding-top: 0; }
+  .fiti-screen-preview { max-height: 440px; }
+  .fiti-detail > figure:nth-child(2) { padding-top: 0; }
   .fiti-sequence ol { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .fiti-page .fiti-statement { margin-top: 48px; }
   .case-study-fiti .nav-links { gap: 20px; flex-wrap: wrap; }
