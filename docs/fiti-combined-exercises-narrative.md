@@ -30,7 +30,9 @@ A better workout experience was also intended to support engagement. Increased e
 
 ## My role
 
-As the main designer for FITI's mobile app, I led the design decisions for this improvement. My focus was translating complex trainer-assigned routines into a clearer mobile experience while working within the existing exercise-list structure.
+As the main designer for FITI's mobile app, I led the design decisions for this improvement, from research and design critiques through prototyping and developer handoff.
+
+I worked closely with my product manager to understand gym members' needs and shape a solution for following trainer-assigned routines within the existing exercise list.
 
 ## A list of exercises is not the same as a workout sequence
 
@@ -71,6 +73,18 @@ This was an improvement to an existing list, not a complete redesign of workout 
 Long exercise names and longer method labels also needed to fit without obscuring the exercise details. The final board includes a wrapping-label variant to address this content variation.
 
 Further validation should examine whether people understand what completing a group set means and how the experience handles combinations with different prescribed sequences or rest rules.
+
+## From research to alignment
+
+Research and design critiques shaped the direction. Close collaboration with my product manager kept decisions grounded in how gym members follow their routines.
+
+A Figma prototype brought the interactions into design checkpoints, giving the team a shared basis for feedback and approval before handoff.
+
+## Ready for implementation
+
+The work extended beyond the screens: updated components and a revised master file kept the new patterns part of FITI's shared design source.
+
+Figma annotations documented interaction behavior for developer handoff, with the prototype providing context for how the screens worked together.
 
 ## Outcome
 
