@@ -1,0 +1,47 @@
+.fiti-project-cover {
+    position: relative;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    isolation: isolate;
+    container-type: inline-size;
+    background: #cfe9d8;
+    text-decoration: none;
+}
+.fiti-cover-screens {
+    position: absolute;
+    inset: -20% -12%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4%;
+    transform: rotate(-14deg);
+    pointer-events: none;
+}
+.fiti-cover-screens img {
+    display: block;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 6px 18px #153d2526;
+    border-radius: 8px;
+}
+.fiti-cover-screens img:nth-child(2) { margin-top: 25%; }
+.fiti-cover-circle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 52%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #111;
+    color: #fff;
+    text-align: center;
+    gap: 6px;
+    z-index: 1;
+}
+.fiti-cover-circle strong,
+.fiti-cover-circle span { font-family: 'Archivo', sans-serif; letter-spacing: 0; line-height: 1.2; }
+.fiti-cover-circle strong { font-size: 6cqw; font-weight: 700; }
+.fiti-cover-circle span { font-size: 4.6cqw; font-weight: 300; }
+.fiti-project-cover:focus-visible { outline: 3px solid #e7fc53; outline-offset: 4px; }
