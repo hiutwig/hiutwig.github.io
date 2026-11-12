@@ -3,7 +3,7 @@
   const asset = '../../assets/fiti/';
   const exercises = [
     { name: 'Flexão de chão', image: 'imgImg1.png', reps: '12x', load: '—' },
-    { name: 'Tríceps francês com barra nome enorme enorme gigante imenso', image: 'imgImg4.png', reps: '15x', load: '10 Kg' },
+    { name: 'Tríceps francês', image: 'imgImg4.png', reps: '15x', load: '10 Kg' },
     { name: 'Supino reto com barra', image: 'imgImg2.png', reps: '10x', load: '20 Kg' }
   ];
   let completed = 0;
@@ -42,7 +42,7 @@
           ${[
             ['72 - Supino reto com barra', 'imgImg2.png'],
             ['45 - Voador na máquina', 'imgImg3.png'],
-            ['95 - Tríceps francês com barra nome enor...', 'imgImg4.png'],
+            ['95 - Tríceps francês', 'imgImg4.png'],
             ['37 - Tríceps corda', 'imgImg5.png']
           ].map(([name, image], index) => `<div class="app-regular"><img class="app-thumb" src="${asset}${image}" alt=""><div>${index === 2 ? '<span class="app-chip app-progressive">Progressivo</span>' : ''}<span>${name}</span></div>${icon('imgSvg2')}</div>`).join('')}
         </div>
