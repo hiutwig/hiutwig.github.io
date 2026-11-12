@@ -3102,12 +3102,22 @@ video {
     background: #cfd5db;
 }
 
-.mundi-swatch-row span:nth-child(2) { background: #14b8b1; }
-.mundi-swatch-row span:nth-child(3) { background: #1e8a7d; }
-.mundi-swatch-row span:nth-child(4) { background: #112e63; }
-.mundi-swatch-row span:nth-child(5) { background: #3289ad; }
-.mundi-state-demo.is-dark .mundi-swatch-row:nth-child(3) span { filter: brightness(0.72); }
-.mundi-state-demo.is-dark .mundi-swatch-row:nth-child(4) span { filter: brightness(1.45); }
+/* Solid fills sampled from the supplied reference, converted to sRGB. */
+.mundi-swatch-row { --sample-1:#02B7B5; --sample-2:#178277; --sample-3:#082458; --sample-4:#2780A8; }
+.mundi-swatch-row:nth-of-type(2) { --sample-1:#027977; --sample-2:#115850; --sample-3:#061C47; --sample-4:#195069; }
+.mundi-swatch-row:nth-of-type(3) { --sample-1:#E3F7F7; --sample-2:#D5F3F0; --sample-3:#E7F0FF; --sample-4:#DAF4FF; }
+.is-dark .mundi-swatch-row:nth-of-type(1) { --sample-1:#02B7B5; --sample-2:#74B4AC; --sample-3:#D4D6DE; --sample-4:#32A0D1; }
+.is-dark .mundi-swatch-row:nth-of-type(2) { --sample-1:#CCFCFC; --sample-2:#D0E5E2; --sample-3:#EFF1F3; --sample-4:#BDE7F8; }
+.is-dark .mundi-swatch-row:nth-of-type(3) { --sample-1:#055552; --sample-2:#013D36; --sample-3:#2F2F2F; --sample-4:#00283B; }
+.mundi-swatch-row span:nth-child(2) { background:var(--sample-1); }
+.mundi-swatch-row span:nth-child(3) { background:var(--sample-2); }
+.mundi-swatch-row span:nth-child(4) { background:var(--sample-3); }
+.mundi-swatch-row span:nth-child(5) { background:var(--sample-4); }
+.mundi-palette-study .mundi-state-demo .mundi-button-stack button:nth-of-type(n) {
+    background:var(--demo-bg);
+    color:var(--demo-ink);
+}
+.mundi-button-stack__tint { grid-column:2; }
 
 .mundi-wide-copy {
     margin: 88px 0;
@@ -5204,13 +5214,28 @@ video {
 }
 
 @media (max-width: 430px) {
-    .mundipagg-page--pdf-structure .mundi-button-stack,
+    .mundipagg-page--pdf-structure .mundi-state-demo {
+        padding: 24px 16px;
+        gap: 24px;
+    }
+
+    .mundipagg-page--pdf-structure .mundi-button-stack {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
     .mundipagg-page--pdf-structure .mundi-swatch-row {
-        grid-template-columns: 1fr;
+        grid-template-columns: 48px repeat(4, minmax(0, 1fr));
+        gap: 8px;
     }
 
     .mundipagg-page--pdf-structure .mundi-swatch-row span {
-        width: 44px;
+        width: 100%;
+        max-width: 44px;
+    }
+
+    .mundipagg-page--pdf-structure .mundi-swatch-row b {
+        font-size: 14px;
     }
 }
 
@@ -5528,6 +5553,7 @@ video {
 
 .mundipagg-page--pdf-structure .mundi-neutral-pair--study > div,
 .mundipagg-page--pdf-structure .mundi-semantic-set {
+    min-height: 0;
     padding: 0;
 }
 
