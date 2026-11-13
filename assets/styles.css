@@ -1481,16 +1481,37 @@ footer {
 
 /* Client Logos Styling */
 .client-logos {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: calc(100% - 48px);
+    max-width: 660px;
+    margin: 0 auto;
     gap: 20px;
 }
 
 .client-logos img {
-    width: 150px;
-    height: auto;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
     border-radius: 8px;
+    filter: brightness(0);
+}
+
+/* Older PNGs already have roughly 30% opacity baked into their alpha. */
+.client-logos .client-logo--wordmark {
+    box-sizing: border-box;
+    padding: 16px;
+    opacity: 0.3;
+}
+
+.client-logos .client-logo--stone {
+    opacity: 0.93;
+}
+
+@media (max-width: 479px) {
+    .client-logos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 /* Skills Section Styling */
